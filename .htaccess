@@ -1,0 +1,33 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+<Files production-config.php>
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files debug.log>
+   Order allow,deny
+   Deny from all
+</Files>
+
+# END WordPress
+RewriteCond %{HTTP_HOST} ^overflowproject\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.overflowproject\.com$
+RewriteRule ^/?$ "http\:\/\/www\.overflowproject\.org\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^theoverflowproject\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.theoverflowproject\.com$
+RewriteRule ^/?$ "http\:\/\/www\.overflowproject\.org\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^theoverflowproject\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.theoverflowproject\.org$
+RewriteRule ^/?$ "http\:\/\/www\.overflowproject\.org\/" [R=301,L]
+Options -Indexes
