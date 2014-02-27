@@ -12,7 +12,29 @@ define('WP_LOCAL_SERVER', file_exists(DB_CREDENTIALS_PATH . '/local-config.php')
 define('WP_DEV_SERVER', file_exists(DB_CREDENTIALS_PATH . '/dev-config.php'));
 
 /**
-* Load DB credentials
+* Load configuration.
+*
+* Database credentials.
+* 
+* define('DB_NAME',          'db');
+* define('DB_USER',          'username');
+* define('DB_PASSWORD',      'hunter2');
+* define('DB_HOST',          'hostname');
+*
+* Authentication Unique Keys and Salts.
+*
+* Change these to different unique phrases!
+* You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+* You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+*
+* define('AUTH_KEY',         'wn{2-/F ;s6-+>0p}E}X5H9+ kF2B!Kou-w-rZj!M(w5(i1KSD^#yT<o~KSoo.`3');
+* define('SECURE_AUTH_KEY',  '&P2;DkHW|+ FBw4[n9zgVM-#B<l0w`YFlqVt9a|E=<yA12!2?*.1>TZp-K}O}il=');
+* define('LOGGED_IN_KEY',    ']<c^tU@Mo4]t%(-Xj28Fe]$<Dg]6.vz*H/LoYH9 L=U6l[{kLt&#9zH/3/|Up-]I');
+* define('NONCE_KEY',        'H`V;bTv4,v)sYom?:|8pSZC2%Zur9~9m-zN^vTI$&KM{dXPeL,pMG{T0gZ`f^{N6');
+* define('AUTH_SALT',        'so+HeC{1-u>`? @[|)Y-*ysXj?+45w,EP_|.]!tT7*+cS-g{+/T87I^e`hB-%Ri!');
+* define('SECURE_AUTH_SALT', '|r=`ETr0obuvYE3*xF hc D(KO%<fF2vM`LB_(QXZ}1RGos~9|TnJZ0sFRwCC3s!');
+* define('LOGGED_IN_SALT',   'X{kCdd6hA+!pW#N2X@`BJzIjb+W,rf%bb7W}:q2`Lw~nzhgYns9qA|+@`{tg5@[(');
+* define('NONCE_SALT',
 */
 
 if (WP_LOCAL_SERVER) {
