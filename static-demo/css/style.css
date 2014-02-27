@@ -1041,15 +1041,16 @@
 	
 	.wrapper-style1
 	{
-		background: #e97770 url('images/overlay.png');
-		color: #eee;
+		background: #CDEAFE url('images/overlay.png');
+		color: #111;
 		color: rgba(255,255,255,0.75);
 	}
 	
 		.wrapper-style1 .title
 		{
-			background: #e97770 url('images/overlay.png');
+			background: #CDEAFE url('images/overlay.png');
 			color: #fff;
+		    text-shadow: #333 0.1em 0.1em 0.2em;
 		}
 	
 		.wrapper-style1 h1,
@@ -1132,6 +1133,7 @@
 			color: #fff;
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
+		    text-shadow: #333 0.1em 0.1em 0.2em;
 		}
 		
 			#intro .style2 a
@@ -1142,6 +1144,7 @@
 		
 		#intro .style3
 		{
+			color: #333;
 		}
 		
 /*********************************************************************************/
