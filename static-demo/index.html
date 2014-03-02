@@ -22,6 +22,8 @@
   </head>
   <body class="homepage">
 
+
+
 <!-- Header Wrapper -->
 <div id="header-wrapper" class="wrapper">
   <div class="container">
@@ -35,9 +37,6 @@
               <div id="logo">
                 <h1>The Overflow Project</h1>
                 <span class="byline">Simplify. Give. Change.</span>
-
-<!-- <div id="header-video"><iframe src="http://player.vimeo.com/video/72309998?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>/div>
--->         
                 <ul class="actions">
                   <li><a href="#" class="button button-style3 button-big fa fa-twitter">@overflowproject</a></li>
                   <li><a href="#" class="button button-style3 button-big fa fa-facebook"> Facebook</a></li>
@@ -76,14 +75,19 @@
         
         <!-- Challenge -->
         <section id="challenge">
-          <p>Commit to the simple act of changing the world. It’s easy: for 50 days, simplify your life. Set aside something that isn’t necessary. Or even something that is. Save at least $1 a day for 50 days by making small changes in the way you live. Give up coffee. Change your own oil. Host a yard sale. Grow your own food. Walk or bike more. Get creative, and make sacrifices.</p>
+          <div class="video"><iframe src="http://player.vimeo.com/video/72309998?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+          <p>Commit to a simple step of changing the world. It’s easy: for 50 days, simplify your life. Save at least $1 a day, and at the end of 50 days, donate your savings to provide clean water for the poorest communities in the world. Out of your overflow, pour into communities in need. It's that simple.</p>
 
 
           <!-- Contact Form -->
           <div class="row">
             <div class="6u">
-          <p>At the end of 50 days, donate your savings to provide clean water for the poorest communities in the world. Out of your overflow, pour into communities in need. It's that simple.</p>
-          <p>100% of all proceeds donated during the 50-Day Challenge will support constructing wells and rainwater catchment systems and providing basic sanitation and hygiene resources through our partnership with World Concern.</p>
+          <h3>Simplify</h3>
+          <p>Set aside something that isn’t necessary. Or even something that is. Give up coffee. Change your own oil. Host a yard sale. Grow your own food. Walk or bike more. Get creative, and make sacrifices.</p>
+          <h3>Give</h3>
+          <p>100% of all proceeds donated for the 50-Day Challenge will support constructing wells and rainwater catchment systems and providing basic sanitation and hygiene resources through our partnership with World Concern.</p>
+          <h3>Change</h3>
+          <p>Engage locally and globally. Change starts with the way you live, and when you change, so can your community. Through this project lives around the world will be transformed by clean, safe water.</p>
             </div>
             <div class="6u">
               <form method="post" action="#">
@@ -356,6 +360,7 @@
   <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css"><![endif]-->
   <script src="js/jquery.min.js"></script>
   <script src="../lib/fitvids/jquery.fitvids.js"></script>
+  <script src="js/rotate-options.js"></script>
   <script src="js/jquery.dropotron.min.js"></script>
   <script src="js/config.js"></script>
   <script src="js/skel.min.js"></script>
@@ -363,7 +368,11 @@
   <script>
     $(document).ready(function(){
       // Target your .container, .wrapper, .post, etc.
-      $("#header-video").fitVids();
+      $('.video').fitVids();
+      $('#challenge-simplify').rotateOptions(
+        ['Changing my own oil', 'Hosting a yard sale', 'Growing my own food', 'Riding my bike instead of driving',
+         'Drinking PBR instead of IPA', 'Making dinner instead of going out']
+      );
     });
   </script>
   </body>
