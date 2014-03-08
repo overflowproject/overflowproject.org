@@ -10,9 +10,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 body, input, select, textarea
 {
-  font-size: 13pt;
-  line-height: 1.75em;
-  letter-spacing: 0.025em;
+  font-size: 12pt;
+  line-height: 1.25em;
+  // letter-spacing: 0.025em;
 }
 
 body
@@ -25,44 +25,15 @@ hr
   margin: 2em 0 2em 0;
 }
 
-section,
-article
-{
+section, article {
   margin: 0 0 4em 0;
 }
 
-header.style1
-{
-  padding: 3em 0 3em 0;
+form label {
+  margin: 0.25em 0 0.25em 0;
 }
 
-  header.style1 h2
-  {
-    font-size: 2em;
-    letter-spacing: 0.075em;
-    line-height: 1.5em;
-  }
-  
-  header.style1 .byline
-  {
-    display: block;
-    margin: 1.15em 0 0 0;
-    font-size: 1.3em;
-    letter-spacing: 0.075em;
-    line-height: 1.5em;
-  }
-
-form
-{
-}
-
-  form label
-  {
-    margin: 0.25em 0 0.25em 0;
-  }
-
-.button
-{
+.button {
   padding: 0 2.25em 0 2.25em;
   font-size: 0.9em;
   min-width: 12em;
@@ -70,21 +41,18 @@ form
   line-height: 4em;
 }
 
-  .button-big
-  {
-    font-size: 1em;
-    min-width: 14em;
-  }
+.button-big {
+  font-size: 1em;
+  min-width: 14em;
+}
 
-.actions
-{
+.actions {
   margin: 3em 0 0 0;
 }
 
-  form .actions
-  {
-    margin-top: 1em;
-  }
+form .actions {
+  margin-top: 1em;
+}
 
   .actions li
   {
@@ -106,75 +74,6 @@ form
   {
     text-align: center;
   }
-  
-.feature-list
-{
-}
-
-  .feature-list section
-  {
-    padding-top: 2em;
-    border-top: solid 1px #eee;
-  }
-
-  .feature-list .row
-  {
-  }
-
-    .feature-list .row:first-child
-    {
-    }
-    
-      .feature-list .row:first-child section
-      {
-        padding-top: 0;
-        border-top: 0;
-      }
-
-  .feature-list h3
-  {
-    margin: 0 0 0.75em 0;
-    font-size: 1.15em;
-    letter-spacing: 0.05em;
-    margin-top: -0.35em;
-  }
-
-    .feature-list h3:before
-    {
-      width: 64px;
-      height: 64px;
-      line-height: 64px;
-      margin-right: 0.75em;
-      font-size: 32px;
-      top: 0.2em;
-    }
-
-  .feature-list p
-  {
-    margin: 0 0 0 5em;
-  }
-  
-  .feature-list-small
-  {
-  }
-  
-    .feature-list-small h3
-    {
-    }
-  
-      .feature-list-small h3:before
-      {
-        font-size: 24px;
-        line-height: 45px;
-        width: 45px;
-        height: 45px;
-        margin-right: 1em;
-      }
-      
-    .feature-list-small p
-    {
-      margin: 0 0 0 4em;
-    }
 
 .is
 {
@@ -250,25 +149,23 @@ form
     margin-left: 7em;
   }
 
+.desktop-hide {
+  display: none !important;
+}
+
 .callout
 {
-  padding: 0.5em;
   margin-bottom: 2em;
 }
 
-  
 /*********************************************************************************/
-/* Wrappers                                                                      */
+/* Sections */
 /*********************************************************************************/
-
 .wrapper
 {
   padding: 6em 0 9em 0;
-}
 
-  .wrapper .title
-  {
-    font-size: 0.9em;
+  .title {
     width: 25em;
     height: 3.25em;
     top: -3.25em;
@@ -277,71 +174,46 @@ form
     margin-left: -12.5em;
     padding-top: 0.5em;
   }
+}
 
-#header-wrapper
-{
+#header-wrapper {
   padding: 0;
-  height: 400px;
+  height: 674px;
 }
 
-  .homepage #header-wrapper
-  {
-    height: 674px;
+#about-wrapper {
+  .footer-one {
+    padding-right: 1.5em;
   }
-
-#challenge-wrapper
-{
-  padding-bottom: 8em;
-}
-
-/*********************************************************************************/
-/* Header                                                                        */
-/*********************************************************************************/
-
-#header
-{
-  position: relative;
-  height: 400px;
-}
-
-  .homepage #header
-  {
-    height: 674px;
+  .footer-two {
+    padding-left: 1.5em;
   }
+}
 
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
 
-#logo
-{
+#logo {
   position: absolute;
   height: 5em;
-  top: 50%;
+  top: 20%;
   left: 0;
   width: 100%;
   text-align: center;
   margin-top: -0.5em;
+  font-size: 2em;
+
+  padding-top: 300px;
+
+  background: url('../images/logo.png') no-repeat center;
+  background-size: 300px;
+
+  img {
+    height: 0px;
+    width: 0px;
+  }
 }
-
-  .homepage #logo
-  {
-    margin-top: -1em;
-  }
-
-  #logo h1
-  {
-    font-size: 2em;
-    letter-spacing: 0.25em;
-  }
-  
-  #logo .byline
-  {
-    margin: 1.25em 0 0 0;
-    display: block;
-    letter-spacing: 0.2em;
-    font-size: 0.9em;
-  }
 
 /*********************************************************************************/
 /* Nav                                                                           */
@@ -454,171 +326,117 @@ form
   }
 
 /*********************************************************************************/
-/* Intro                                                                         */
-/*********************************************************************************/
-
-#challenge
-{
-  text-align: center;
-}
-
-  #challenge .style1
-  {
-    font-size: 1.5em;
-    letter-spacing: 0.075em;
-  } 
-  
-  #footer .style2
-  {
-    font-size: 1em;
-    letter-spacing: 0.075em;
-    line-height: 1.35em;
-    padding: 1em 0 1em 0;
-    margin-bottom: 1em;
-    text-align: center;
-  }
-  
-  #challenge .style3
-  {
-    font-size: 1.1em;
-    width: 48em;
-    margin: 0 auto;
-  }
-
-/*********************************************************************************/
 /* Features                                                                      */
 /*********************************************************************************/
-
-#features
-{
+.features {
   padding: 0 6em 0 6em;
-}
 
-  #features header.style1
-  {
-    padding-bottom: 5em;
-  }
-  
-  #features .actions
-  {
+  .actions {
     margin-top: 5em;
   }
+}
+
+.feature-list
+{
+}
+
+  .feature-list section
+  {
+    padding-top: 2em;
+    border-top: solid 1px #eee;
+  }
+
+  .feature-list .row
+  {
+  }
+
+    .feature-list .row:first-child
+    {
+    }
+    
+      .feature-list .row:first-child section
+      {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+  .feature-list h3
+  {
+    margin: 0 0 0.75em 0;
+    font-size: 1.15em;
+    letter-spacing: 0.05em;
+    margin-top: -0.35em;
+  }
+
+    .feature-list h3:before
+    {
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+      margin-right: 0.75em;
+      font-size: 32px;
+      top: 0.2em;
+    }
+
+  .feature-list p
+  {
+    margin: 0 0 0 5em;
+  }
+  
+  .feature-list-small
+  {
+  }
+  
+    .feature-list-small h3
+    {
+    }
+  
+      .feature-list-small h3:before
+      {
+        font-size: 24px;
+        line-height: 45px;
+        width: 45px;
+        height: 45px;
+        margin-right: 1em;
+      }
+      
+    .feature-list-small p
+    {
+      margin: 0 0 0 4em;
+    }
+
 
 /*********************************************************************************/
 /* Highlights                                                                    */
 /*********************************************************************************/
-
-#highlights
-{
-}
-
-  #highlights .highlight
-  {
-  }
-
-    #highlights .highlight h3
-    {
+.highlights {
+  .highlight {
+    h3 {
       margin: 0 0 0.75em 0;
       font-size: 1.15em;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.05em;      
     }
-
-  #highlights .highlight-one
-  {
-    padding-right: 2em;
+    .highlight-one {
+      padding-right: 2em;
+    }
+    .highlight-two {
+      padding: 0 1em 0 1em;
+    }
+    .highlight-three {
+      padding-left: 2em;
+    }
   }
-  
-  #highlights .highlight-two
-  {
-    padding: 0 1em 0 1em;
-  }
-  
-  #highlights .highlight-three
-  {
-    padding-left: 2em;
-  }
-
-/*********************************************************************************/
-/* Main                                                                          */
-/*********************************************************************************/
-
-#main
-{
-  margin: 1em 0 1em 0;
 }
-
-  .homepage #main
-  {
-    margin: 0;
-  }
-
-/*********************************************************************************/
-/* Content                                                                       */
-/*********************************************************************************/
-
-#content
-{
-}
-
-/*********************************************************************************/
-/* Sidebar                                                                       */
-/*********************************************************************************/
-
-#sidebar
-{
-}
-
-  .left-sidebar #sidebar
-  {
-    padding-right: 3em;
-  }
-
-  .right-sidebar #sidebar
-  {
-    padding-left: 3em;
-  }
-
-/*********************************************************************************/
-/* Footer                                                                        */
-/*********************************************************************************/
-
-#footer
-{
-}
-
-  #footer header.style1
-  {
-    padding-bottom: 0;
-  }
-
-  #footer hr
-  {
-    margin: 6em 0 6em 0;
-  }
-
-  #footer .footer-one
-  {
-    padding-right: 1.5em;
-  }
-  
-  #footer .footer-two
-  {
-    padding-left: 1.5em;
-  }
-
 
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
-
-#copyright
-{
+#copyright {
   margin: 6em 0 0 0;
-}
-
-  #copyright span
-  {
+ 
+  span {
     padding: 1.5em 4em 1.5em 4em;
     line-height: 1em;
     font-size: 0.8em;
   }
+}

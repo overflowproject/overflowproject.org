@@ -8,71 +8,35 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 /* Basic                                                                         */
 /*********************************************************************************/
 
-body, input, select, textarea
-{
+body, input, select, textarea {
   line-height: 1.5em;
   font-size: 10.5pt;
   letter-spacing: 0;
 }
 
-h2, h3, h4, h5, h6
-{
+h2, h3, h4, h5, h6 {
   font-size: 1.2em;
   letter-spacing: 0.05em;
   margin: 0 0 1em 0;
 }
 
-section,
-article
-{
+section, article {
   clear: both;
   padding: 1em 0 1em 0 !important;
 }
 
-header.style1
-{
-  padding: 0 0 1em 0;
-}
-
-  header.style1 h2
-  {
-    font-size: 1.5em;
-    letter-spacing: 0.075em;
-    line-height: 1.25em;
-  }
-  
-  header.style1 .byline
-  {
-    display: block;
-    margin: 0;
-  }
-  
-hr
-{
+hr {
   margin: 1em 0 1em 0;
 }
 
-form
-{
-}
-
-  form input.text,
-  form select,
-  form textarea
-  {
-  }
-
-.image-featured
-{
+.image-featured {
   position: relative;
   overflow: hidden;
 
   /* Adjust this to change the minimum height of the image */
   min-height: 10em;
-}
 
-  .image-featured img
-  {
+  img {
     position: absolute;
     top: 0;
     height: 100%;
@@ -81,9 +45,9 @@ form
     /* Adjust this to change the horizontal placement of the image */
     left: -50%;     
   }
+}
 
-.button
-{
+.button {
   display: block;
   width: 100%;
   font-size: 1em;
@@ -92,85 +56,21 @@ form
   margin: 0 auto;
 }
 
-.actions
-{
+.actions {
   margin: 2em 0 0 0;
-}
 
-  form .actions
-  {
-    margin: 1em 0 0 0;
-  }
-
-  .actions li
-  {
+  li {
     margin: 15px 0 0 0;
   }
-
-.feature-list
-{
 }
 
-  .feature-list section
-  {
-    border-top: solid 1px #eee;
-  }
-
-    /* Ugh ... disgusting. */
-    .feature-list > div > div:first-child > div:first-child > section
-    {
-      border-top: 0;
-      padding-top: 0;
-    }
-  
-  .feature-list h3
-  {
-    position: relative;
-    padding: 4px 0 0 48px;
-    line-height: 1.25em;
-  }
-
-    .feature-list h3:before
-    {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 32px;
-      height: 32px;
-      line-height: 32px;
-      font-size: 16px;
-    }
-
-  .feature-list p
-  {
-    margin: 0 0 0 48px;
-  }
-
-.is-post-excerpt
-{
+form .actions {
+  margin: 1em 0 0 0;
 }
 
-  .is-post-excerpt .image-left
-  {
-    position: relative;
-    top: 0.25em;
-    width: 25%;
-    margin: 0;
-  }
-  
-  .is-post-excerpt h3,
-  .is-post-excerpt p
-  {
-    margin-left: 32.5%;
-  }
 
-.mobile-hide
-{
-  display: none;
-}
-
-.callout {
-  padding: 1em;
+.mobile-hide {
+  display: none !important;
 }
 
 /*********************************************************************************/
@@ -267,16 +167,12 @@ form
   #navPanel .depth-0 { color: #fff; }
 
 /*********************************************************************************/
-/* Wrappers                                                                      */
+/* Sections */
 /*********************************************************************************/
-
-.wrapper
-{
+.wrapper {
   padding: 15px 15px 5em 15px;
-}
 
-  .wrapper .title
-  {
+ .title {
     font-size: 0.9em;
     width: 18em;
     height: 2.5em;
@@ -287,120 +183,37 @@ form
     padding-top: 0.5em;
   }
   
-    .wrapper .title:before,
-    .wrapper .title:after
-    {
-      height: 15px;
-      bottom: -15px;
-      background-size: 100% 100%;
-    }
-
-#header-wrapper
-{
-  padding: 6em 2em 6em 2em;
-}
-
-#footer-wrapper
-{
-  padding-top: 3em;
-}
-
-  #footer-wrapper .feature-list section
-  {
-    border-top-color: #eee;
-    border-top-color: rgba(255,255,255,0.05);
+  .wrapper .title:before, .wrapper .title:after {
+    height: 15px;
+    bottom: -15px;
+    background-size: 100% 100%;
   }
+}
 
-/*********************************************************************************/
-/* Header                                                                        */
-/*********************************************************************************/
-
-#header
-{
+#header-wrapper {
+  padding: 6em 2em 6em 2em;
 }
 
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
-
-#logo
-{
-  text-align: center;
-}
-
-  #logo h1
-  {
-    font-size: 1.5em;
-    letter-spacing: 0.2em;
-  }
+#logo {
+  padding-top: 150px;
   
-  #logo .byline
-  {
-    margin: 1.25em 0 0 0;
-    display: block;
-    letter-spacing: 0.2em;
-    font-size: 0.9em;
+
+  text-align: center;
+  font-size: 1.5em;
+
+  img {
+    height: 150px;
+    width: 150px;
   }
+}
 
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
-
-#nav
-{
-  display: none;
-}
-
-/*********************************************************************************/
-/* Intro                                                                         */
-/*********************************************************************************/
-
-#challenge
-{
-  margin: 0 auto;
-}
-
-  #challenge .style2
-  {
-    font-size: 1.5em;
-    letter-spacing: 0.05em;
-    line-height: 1.25em;
-    padding: 1.25em;
-  }
-
-/*********************************************************************************/
-/* Main                                                                          */
-/*********************************************************************************/
-
-#main
-{
-  padding: 1em 0 0 0;
-}
-
-/*********************************************************************************/
-/* Content                                                                       */
-/*********************************************************************************/
-
-#content
-{
-  padding: 0 0 2em 0;
-}
-
-  #content header.style1
-  {
-    padding-bottom: 2.5em;
-  }
-
-/*********************************************************************************/
-/* Footer                                                                        */
-/*********************************************************************************/
-
-#footer
-{
-}
-
-#footer hr
-{
+#nav {
   display: none;
 }
 
@@ -412,16 +225,38 @@ form
 }
 
 /*********************************************************************************/
+/* Feature list                                                                  */
+/*********************************************************************************/
+.feature-list { 
+  h3 {
+    position: relative;
+    padding: 4px 0 0 48px;
+    line-height: 1.25em;
+  }
+
+  h3:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 0 0 0 48px;
+  }
+}
+
+/*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
-
 #copyright
 {
   padding: 2em 0 0 0;
-}
-
-  #copyright span
-  {
+  span {
     padding: 1.5em 4em 1.5em 4em;
     line-height: 1.5em;
   }
+}
