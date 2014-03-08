@@ -31,11 +31,10 @@ body {
 /*********************************************************************************/
 #logo {
   margin-top: -0.5em !important;
+  padding-top: 200px;
+  background: url('../images/logo.png') no-repeat center;
+  background-size: 200px;
   font-size: 1.75em;
-}
-#logo img {
-  height: 200px;
-  width: 200px;
 }
 /*********************************************************************************/
 /* Intro                                                                         */
