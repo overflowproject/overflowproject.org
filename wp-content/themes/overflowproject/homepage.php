@@ -17,11 +17,11 @@ Template Name: Homepage2014
     <meta name="keywords" content="">
     <meta charset="utf-8" />
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond|Montserrat|Permanent+Marker|Source+Sans+Pro:300,300italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <noscript>
-      <link rel="stylesheet" href="css/skel-noscript.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/style-desktop.css">
+      <link rel="stylesheet" href="/css/skel-noscript.css">
+      <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/css/style-desktop.css">
     </noscript>
   </head>
   <body>
@@ -353,13 +353,12 @@ Template Name: Homepage2014
 <!-- /Footer Wrapper -->
 
   <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css"><![endif]-->
-  <script src="js/jquery.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
   <script src="../lib/fitvids/jquery.fitvids.js"></script>
-  <script src="js/rotate-options.js"></script>
-  <script src="js/jquery.dropotron.min.js"></script>
-  <script src="js/config.js"></script>
-  <script src="js/skel.min.js"></script>
-  <script src="js/skel-panels.min.js"></script>
+  <script src="/js/rotate-options.js"></script>
+  <script src="/js/jquery.dropotron.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-panels.min.js"></script>
   <script>
     $(document).ready(function(){
       // Target your .container, .wrapper, .post, etc.
