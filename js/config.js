@@ -51,7 +51,8 @@ jQuery(function() {
     });  
   };
 
-  $('#contactform input[type="submit"').click(function() {  
+  $('#contactform input[type="submit"').click(function(ev) {  
+    ev.preventDefault();
     var form = $(this).closest('form');
     submitForm(form);
     var thanks = $(form).find('.thanks');
@@ -60,7 +61,8 @@ jQuery(function() {
     return false;  
   });
 
-  $('#challengeform input[type="submit"').click(function() {  
+  $('#challengeform input[type="submit"').click(function(ev) {  
+    ev.preventDefault();
     var form = $(this).closest('form');
     submitForm(form);
 
