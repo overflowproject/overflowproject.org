@@ -10,6 +10,7 @@ INDEX PAGE
 - Map urls from blog to current index site:
 	- /50daychallenge => /#50
 - New video
+- Form submit magic doesn't work on iOS Chrome or Safari.
 
 
 BLOG/CMS

@@ -180,6 +180,7 @@ form .actions {
   padding: 6em 2em 6em 2em;
 }
 #blog-wrapper img.alignright {
+  display: block;
   float: none;
   margin: 1em;
 }
