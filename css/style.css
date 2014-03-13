@@ -301,6 +301,13 @@ article:last-child {
 #challenge-wrapper form .actions {
   text-align: center;
 }
+#challenge-wrapper .thanks {
+  border-radius: 0.35em;
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+  padding: 1em;
+  background: #fff;
+  color: #919499;
+}
 #water-wrapper {
   background: #fff;
 }
@@ -437,6 +444,58 @@ article:last-child {
 }
 #copyright span a:hover {
   color: #fff;
+}
+/*********************************************************************************/
+/* Flippable elements                                                            */
+/*********************************************************************************/
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container.flipped .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* flip speed goes here */
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -ms-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 /*********************************************************************************/
 /* Mixins                                                                        */

@@ -1,5 +1,5 @@
 [submodule "wordpress"]
-	path = wordpress
+	path = blog/wordpress
 	url = git://github.com/WordPress/WordPress.git
 [submodule "lib/fitvids"]
 	path = lib/fitvids
