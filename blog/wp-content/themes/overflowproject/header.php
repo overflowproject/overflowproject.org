@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html lang="en">
 
 <head profile="http://gmpg.org/xfn/11">
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
+<meta charset="utf-8" />
 <meta property="og:image" content="http://overflowproject.org/images/top_logo.png" />
 <meta property="og:title" content="The Overflow Project" />
 <meta property="og:url" content="http://overflowproject.org" />
@@ -13,10 +13,17 @@
 
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 
-<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+
+<link href='//fonts.googleapis.com/css?family=EB+Garamond|Montserrat|Permanent+Marker|Source+Sans+Pro:300,300italic,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<noscript>
+  <link rel="stylesheet" href="/css/skel-noscript.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-desktop.css">
+</noscript>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,22 +34,10 @@
   ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
 </script>
-<script type="text/javascript">
-function trackFormSubmit(form, category, action, label) { 
-  try { 
-    _gaq.push(['_trackEvent', category , action, label]); 
-  } catch(err) {}
-  setTimeout(function() {
-    form.submit(); 
-  }, 100);
-  return false;
-}
-</script>
-
 </head>
 <body <?php body_class(); ?>>
 <!-- Header Wrapper -->
-<div id="header-wrapper" class="wrapper">
+<div id="blog-header-wrapper" class="wrapper">
   <div class="container">
     <div class="row">
       <div class="12u">
@@ -51,15 +46,15 @@ function trackFormSubmit(form, category, action, label) {
           <div id="header">
             
             <!-- Logo -->
-              <div id="logo">
-                <h1>The Overflow Project</h1>
+              <div id="blog-logo">
+                <h1><a href="/blog">The Overflow Project</a></h1>
               </div>
             <!-- /Logo -->
             
             <!-- Nav -->
               <nav id="nav">
                 <ul>
-                  <li class="desktop-hide"><a href="#">Welcome</a></li>
+                  <li><a href="/#">Welcome</a></li>
                   <li><a href="/#50">50-Day Challenge</a></li>
                   <li><a href="/#water">Why Water?</a></li>
                   <li><a href="/#resources">Resources</a></li>

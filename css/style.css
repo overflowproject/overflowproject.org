@@ -20,7 +20,6 @@ textarea,
 select {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  color: #919499;
 }
 h1,
 h2,
@@ -57,7 +56,7 @@ a:hover {
 }
 strong,
 b {
-  font-weight: 700;
+  font-weight: 600;
 }
 blockquote {
   border-left: solid 0.5em #ddd;
@@ -355,6 +354,29 @@ article:last-child {
   color: #49464c;
   background: #6dd5e6;
 }
+#blog-header-wrapper {
+  background: #49464c;
+}
+#blog-wrapper .button {
+  background: #6dd5e6;
+}
+#blog-wrapper img.alignright {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+#blog-wrapper ul {
+  list-style: inherit;
+  padding-left: 2em;
+}
+#blog-wrapper p,
+#blog-wrapper ul {
+  margin: 1em 0;
+}
+#blog-footer-wrapper {
+  background: #49464c;
+  color: #eee;
+}
 /*********************************************************************************/
 /* Corner ribbon                                                                 */
 /*********************************************************************************/
@@ -448,54 +470,30 @@ article:last-child {
 /*********************************************************************************/
 /* Flippable elements                                                            */
 /*********************************************************************************/
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000;
+/* currently unused */
+/*********************************************************************************/
+/* Blog logo                                                                     */
+/*********************************************************************************/
+#blog-logo {
+  color: #fff;
 }
-/* flip the pane when hovered */
-.flip-container.flipped .flipper {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+#blog-logo img {
+  float: left;
 }
-/* flip speed goes here */
-.flipper {
-  -webkit-transition: 0.6s;
-  -moz-transition: 0.6s;
-  -o-transition: 0.6s;
-  -ms-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+#blog-logo h1 {
   position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0.6em 0 0 0;
 }
-/* hide back of pane during swap */
-.front,
-.back {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-}
-/* back, initially hidden pane */
-.back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+#blog-logo .byline {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  display: block;
+  margin: 0.6em 0 0 0;
+  letter-spacing: 0.02em;
+  font-size: 90%;
 }
 /*********************************************************************************/
 /* Mixins                                                                        */

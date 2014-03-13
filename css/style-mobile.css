@@ -179,6 +179,10 @@ form .actions {
 #header-wrapper {
   padding: 6em 2em 6em 2em;
 }
+#blog-wrapper img.alignright {
+  float: none;
+  margin: 1em;
+}
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
@@ -186,6 +190,13 @@ form .actions {
   padding-top: 200px;
   background: url('../images/logo-150.png') no-repeat center;
   background-size: 150px;
+  text-align: center;
+  font-size: 1.5em;
+}
+/*********************************************************************************/
+/* Blog logo                                                                     */
+/*********************************************************************************/
+#blog-logo {
   text-align: center;
   font-size: 1.5em;
 }

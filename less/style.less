@@ -28,7 +28,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 body, input, textarea, select {
   font-family: 'Source Sans Pro', sans-serif;;
   font-weight: 300;
-  color: #919499;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -55,7 +54,7 @@ a:hover {
 }
 
 strong, b {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 blockquote {
@@ -338,6 +337,38 @@ section:last-child, article:last-child {
   }
 }
 
+#blog-header-wrapper {
+  background: @dkgrey;
+}
+
+#blog-wrapper {
+  .button {
+    background: @blue;
+  }
+
+  // Legacy styles.
+  img.alignright {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: inherit;
+    padding-left: 2em;
+  }
+
+  p, ul {
+    margin: 1em 0;
+  }
+
+}
+
+#blog-footer-wrapper {
+  background: @dkgrey;
+  color: #eee;
+}
+
 /*********************************************************************************/
 /* Corner ribbon                                                                 */
 /*********************************************************************************/
@@ -444,44 +475,72 @@ section:last-child, article:last-child {
 /*********************************************************************************/
 /* Flippable elements                                                            */
 /*********************************************************************************/
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000;
-}
-/* flip the pane when hovered */
-.flip-container.flipped .flipper {
-  .transform(rotateY(180deg));
-}
+/* currently unused */
+// /* entire container, keeps perspective */
+// .flip-container {
+//   perspective: 1000;
+// }
+// /* flip the pane when hovered */
+// .flip-container.flipped .flipper {
+//   .transform(rotateY(180deg));
+// }
 
-/* flip speed goes here */
-.flipper {
-  .transition(0.6s);
-  .transform-style(preserve-3d);
+// /* flip speed goes here */
+// .flipper {
+//   .transition(0.6s);
+//   .transform-style(preserve-3d);
 
-  position: relative;
+//   position: relative;
+// }
+
+//  hide back of pane during swap 
+// .front, .back {
+//   backface-visibility: hidden;
+//   -webkit-backface-visibility: hidden;
+// }
+
+// /* front pane, placed above back */
+// .front {
+//   z-index: 2;
+// }
+
+// /* back, initially hidden pane */
+// .back {
+//   .transform(rotateY(180deg));
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// }
+
+
+/*********************************************************************************/
+/* Blog logo                                                                     */
+/*********************************************************************************/
+#blog-logo {
+  color: #fff;
+
+  img {
+    float: left;
+  }
+  h1 {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0.6em 0 0 0;
+  }
+
+  .byline {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    display: block;
+    margin: 0.6em 0 0 0;
+    letter-spacing: 0.02em;
+    font-size: 90%;
+  }
 }
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-}
-
-/* back, initially hidden pane */
-.back {
-  .transform(rotateY(180deg));
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
 
 
 /*********************************************************************************/
