@@ -1,28 +1,22 @@
 <?php get_header(); ?>
-<div id="container">
-  <div id="home-left">
-  <?php query_posts('pagename=op-description');
-  if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php the_content(); ?>
-  <?php endwhile; endif; ?>
-  
-<div id="first-post">
-  <h3><a href="<?php echo get_settings('home'); ?>/category/blog">Blog</a>
-<a href="<?php bloginfo('rss2_url'); ?>"><img src="/images/feed-icon-14x14.png" alt="Feed" /></a></h3>
-   <?php query_posts('posts_per_page=1'); ?>
-   <?php while (have_posts()) : the_post(); ?>
-   <h1><?php the_title(); ?></h1>
-     <div style="margin-top:-2px;"><small><?php the_time('m.d.y'); ?></small></div>
-     <div style="margin-top:-1em;"><?php the_excerpt() ?></div>
-     <?php endwhile; ?>
-  <div><a class="opbutton" href="<?php echo get_settings('home'); ?>/category/blog">Read More</a></div>
-</div>
-  </div>
-  <div id="home-right">
-    <?php query_posts('pagename=featured-content');
-     if (have_posts()) : while (have_posts()) : the_post(); ?>
-       <?php the_content(); ?>
-    <?php endwhile; endif; ?>
-  </div>
-</div><!-- container -->
+  <div id="container">
+      <h3><?php the_category(', ') ?> <a href="<?php bloginfo('rss2_url'); ?>"><img src="/images/feed-icon-14x14.png" alt="Feed" /></a></h3>
+      <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+           <div class="results_date"><?php the_time('j'); ?><br><?php the_time('M'); ?><br><?php the_time('Y'); ?>
+</div><div class="results_content">
+           <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+           <div>
+              <?php the_content(); ?>
+              </div>
+           </div>
+           <br clear="all"><hr clear="all"><br>
+        <?php endwhile; ?>
+      <?php else : ?>
+          <h3>Not Found</h3>
+      <?php endif; ?>
+      <div class="pagination">
+      <?php previous_posts_link('&laquo; Newer') ?> <?php next_posts_link('Older &raquo;') ?>
+      </div>
+</div><!-- end container -->
 <?php get_footer(); ?>

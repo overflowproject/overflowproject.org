@@ -41,16 +41,38 @@ function trackFormSubmit(form, category, action, label) {
 
 </head>
 <body <?php body_class(); ?>>
-<div id="wrapper">
-	<a id="logo" href="<?php bloginfo('url'); ?>">The Overflow Project</a>
-	  <div class="clear"></div>
-<div id="header">
-	<div id="nav">
-		<?php wp_nav_menu( array('menu' => 'Top Nav' )); ?>
-	</div> <!-- nav -->
-<div id="social">
-<a id="fb" href="http://www.facebook.com/pages/The-Overflow-Project/320719404645626">Facebook</a>
-<a id="tw" href="https://twitter.com/OverflowProject">Twitter</a>
+<!-- Header Wrapper -->
+<div id="header-wrapper" class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+      
+        <!-- Header -->
+          <div id="header">
+            
+            <!-- Logo -->
+              <div id="logo">
+                <h1>The Overflow Project</h1>
+              </div>
+            <!-- /Logo -->
+            
+            <!-- Nav -->
+              <nav id="nav">
+                <ul>
+                  <li class="desktop-hide"><a href="#">Welcome</a></li>
+                  <li><a href="/#50">50-Day Challenge</a></li>
+                  <li><a href="/#water">Why Water?</a></li>
+                  <li><a href="/#resources">Resources</a></li>
+                  <li><a href="/#about">About The Overflow Project</a></li>
+                </ul>
+              </nav>
+            <!-- /Nav -->
+
+          </div>
+        <!-- /Header -->
+
+      </div>
+    </div>
+  </div>
 </div>
-	  <div class="clear"></div>
-</div> <!-- header -->
+<!-- /Header Wrapper -->
