@@ -277,7 +277,7 @@ Template Name: Homepage2014
               <!-- Contact Form -->
                 <section class="footer-one feature-list feature-list-small">
                   <h3 class="fa fa-question"><span>Have questions?</span></h3>
-                  <form method="post" action="#" id="#contactform">
+                  <form method="post" action="#">
                     <div>
                       <div class="row half">
                         <div class="6u">

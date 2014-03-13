@@ -40,7 +40,7 @@ jQuery(function() {
     jQuery('form').n33_formerize();
   }
 
-  $('#contactform input[type="submit"').click(function() {  
+  $('input[type="submit"').click(function() {  
     var form = $(this).closest('form');
     var data = $(form).serializeArray();
     data['recipient'] = 'lant@lantius.org'
@@ -48,7 +48,7 @@ jQuery(function() {
     $.ajax({  
      type: "POST",  
      url: "http://formmail.dreamhost.com/cgi-bin/formmail.cgi",  
-     data: data,  
+     data: data
     });  
 
     var thanks = $(form).find('.thanks');
