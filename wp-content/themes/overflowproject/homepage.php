@@ -357,6 +357,7 @@ Template Name: Homepage2014
   <script src="../lib/fitvids/jquery.fitvids.js"></script>
   <script src="/js/rotate-options.js"></script>
   <script src="/js/jquery.dropotron.min.js"></script>
+  <script src="/js/config.js"></script>
   <script src="/js/skel.min.js"></script>
   <script src="/js/skel-panels.min.js"></script>
   <script>
