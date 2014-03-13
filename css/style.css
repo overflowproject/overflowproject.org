@@ -254,6 +254,9 @@ article:last-child {
   text-align: left;
   margin-bottom: 1em;
 }
+#challenge-wrapper .actions {
+  text-align: center;
+}
 #challenge-wrapper form {
   border-radius: 0.35em;
   box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
@@ -297,15 +300,23 @@ article:last-child {
 #challenge-wrapper form label {
   text-align: left;
 }
-#challenge-wrapper form .actions {
-  text-align: center;
-}
-#challenge-wrapper .thanks {
+#challenge-wrapper .thanks,
+#challenge-wrapper .fake-thanks {
   border-radius: 0.35em;
   box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
   padding: 1em;
   background: #fff;
   color: #919499;
+}
+#challenge-wrapper .thanks .actions li,
+#challenge-wrapper .fake-thanks .actions li {
+  margin: 1em 0 0 0;
+}
+#challenge-wrapper .thanks .actions li:first-child,
+#challenge-wrapper .fake-thanks .actions li:first-child {
+  margin: 0;
+}
+#challenge-wrapper .thanks {
   display: none;
 }
 #water-wrapper {
@@ -471,7 +482,54 @@ article:last-child {
 /*********************************************************************************/
 /* Flippable elements                                                            */
 /*********************************************************************************/
-/* currently unused */
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container.flipped .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* flip speed goes here */
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -ms-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 /*********************************************************************************/
 /* Blog logo                                                                     */
 /*********************************************************************************/

@@ -254,6 +254,10 @@ section:last-child, article:last-child {
     margin-bottom: 1em;
   }
   
+  .actions {
+    text-align: center;
+  }
+
   form {
     .placeholder(#777, @family: @challengeFormFont);
     .roundedBorder(rgba(0,0,0,0.25));
@@ -268,17 +272,25 @@ section:last-child, article:last-child {
     label {
       text-align: left;
     }
-
-    .actions {
-      text-align: center;
-    }
   }
 
-  .thanks {
+  .thanks, .fake-thanks {
     .roundedBorder(rgba(0,0,0,0.25));
     padding: 1em;
     background: #fff;
     color: #919499;
+
+    .actions {
+      li {
+        margin: 1em 0 0 0;
+      }
+      li:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .thanks {
     display: none;
   }
 
@@ -477,44 +489,43 @@ section:last-child, article:last-child {
 /*********************************************************************************/
 /* Flippable elements                                                            */
 /*********************************************************************************/
-/* currently unused */
-// /* entire container, keeps perspective */
-// .flip-container {
-//   perspective: 1000;
-// }
-// /* flip the pane when hovered */
-// .flip-container.flipped .flipper {
-//   .transform(rotateY(180deg));
-// }
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container.flipped .flipper {
+  .transform(rotateY(180deg));
+}
 
-// /* flip speed goes here */
-// .flipper {
-//   .transition(0.6s);
-//   .transform-style(preserve-3d);
+/* flip speed goes here */
+.flipper {
+  .transition(0.6s);
+  .transform-style(preserve-3d);
 
-//   position: relative;
-// }
+  position: relative;
+}
 
-//  hide back of pane during swap 
-// .front, .back {
-//   backface-visibility: hidden;
-//   -webkit-backface-visibility: hidden;
-// }
+ // hide back of pane during swap 
+.front, .back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
 
-// /* front pane, placed above back */
-// .front {
-//   z-index: 2;
-// }
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
 
-// /* back, initially hidden pane */
-// .back {
-//   .transform(rotateY(180deg));
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-// }
+/* back, initially hidden pane */
+.back {
+  .transform(rotateY(180deg));
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
 
 /*********************************************************************************/

@@ -4,7 +4,7 @@ TODO
 INDEX PAGE
 ======
 - Connect forms to some kind of submit tool
-- "Thank you" response when joining the challenge
+- More "Thank you" response text when joining the challenge?
 - Images for H2O facts
 - Resources content
 - Map urls from blog to current index site:

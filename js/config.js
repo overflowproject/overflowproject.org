@@ -40,8 +40,7 @@ jQuery(function() {
     jQuery('form').n33_formerize();
   }
 
-  $('input[type="submit"').click(function() {  
-    var form = $(this).closest('form');
+  var submitForm = function(form) {
     var data = $(form).serializeArray();
     data['recipient'] = 'lant@lantius.org'
 
@@ -50,10 +49,32 @@ jQuery(function() {
      url: "http://formmail.dreamhost.com/cgi-bin/formmail.cgi",  
      data: data
     });  
+  };
 
+  $('#contactform input[type="submit"').click(function() {  
+    var form = $(this).closest('form');
+    submitForm(form);
     var thanks = $(form).find('.thanks');
     $(thanks).hide().fadeIn(500);
 
     return false;  
   });
+
+  $('#challengeform input[type="submit"').click(function() {  
+    var form = $(this).closest('form');
+    submitForm(form);
+
+    var flipContainer = $(form).closest('.flip-container');
+    $(flipContainer).toggleClass('flipped');
+
+    
+    var thanks = $(flipContainer).siblings('.thanks');
+    setTimeout(function() { 
+      $(flipContainer).hide();
+      $(thanks).show();
+    }, 650);
+
+    return false;  
+  });
+
 });
