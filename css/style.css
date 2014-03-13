@@ -141,6 +141,9 @@ form textarea:focus {
 form textarea {
   min-height: 12em;
 }
+form .thanks {
+  display: none;
+}
 form ::-moz-focus-inner {
   border: 0;
 }
