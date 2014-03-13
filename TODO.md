@@ -29,3 +29,4 @@ INFRASTRUCTURE
 ========
 - Document gulp / less
 - skel loading performance
+- Analytics all the things!
