@@ -23,8 +23,18 @@ Template Name: Homepage2014
       <link rel="stylesheet" href="/css/style.css">
       <link rel="stylesheet" href="/css/style-desktop.css">
     </noscript>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44650121-1', 'overflowproject.org');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+    </script> 
   </head>
-  <body>
+<body>
 
 
 
@@ -65,6 +75,9 @@ Template Name: Homepage2014
 </div>
 <!-- /Header Wrapper -->
     
+<?php the_content(); ?>
+
+
 <!-- Challenge Wrapper -->
 <div id="challenge-wrapper" class="wrapper">
   <h1 class="title" id="50">50-Day Challenge</h1>
@@ -125,7 +138,7 @@ Template Name: Homepage2014
           <div class="row">
             <div class="4u">
               <section class="highlight highlight-one">
-                <a href="http://fav.me/d59i3b3" class="image image-full"><img src="images/pic02.jpg" alt="" /></a>
+                <a href="http://fav.me/d59i3b3" class="image image-full"><img src="/images/pic02.jpg" alt="" /></a>
                 <h3><a>Water is more than H<sub>2</sub>O</a></h3>
                 <p>Water, sanitation, and hygiene (WASH) solutions help close the cycle of disease in a community. Inability to access clean water makes even the simple act of washing your hands an impossible task. Nearly 90% of all diseases are caused by poor hygiene, inadequate sanitation, and unsafe drinking water.
                 <br><em class="small">Living Water International</em></p>
@@ -133,7 +146,7 @@ Template Name: Homepage2014
             </div>
             <div class="4u">
               <section class="highlight highlight-two">
-                <a href="http://fav.me/d4tqyby" class="image image-full"><img src="images/pic03.jpg" alt="" /></a>
+                <a href="http://fav.me/d4tqyby" class="image image-full"><img src="/images/pic03.jpg" alt="" /></a>
                 <h3>Water is Life</h3>
                 <p>The United Nations Development Program says clean water is among the most powerful preventive ways to reduce child mortality. The availability of clean water in a rural village reduces infant mortality by 35 to 50 percent, at a cost of roughly $10 per person per year.
                 <br><em class="small">World Health Organization</em></p>
@@ -141,7 +154,7 @@ Template Name: Homepage2014
             </div>
             <div class="4u">
               <section class="highlight highlight-three">
-                <a href="http://fav.me/d5w2dot" class="image image-full"><img src="images/pic04.jpg" alt="" /></a>
+                <a href="http://fav.me/d5w2dot" class="image image-full"><img src="/images/pic04.jpg" alt="" /></a>
                 <h3>Access is Everything</h3>
                 <p>Research in Uganda found households spending on average 660 hours a year collecting water. This represents two full months of labor, with attendant opportunity costs for education, income generation, and female leisure time.
                       <br><em class="small">United Nations Development Program, 2006</em></p>
@@ -264,26 +277,32 @@ Template Name: Homepage2014
               <!-- Contact Form -->
                 <section class="footer-one feature-list feature-list-small">
                   <h3 class="fa fa-question"><span>Have questions?</span></h3>
-                  <form method="post" action="#">
+                  <form method="post" action="#" id="#contactform">
                     <div>
                       <div class="row half">
                         <div class="6u">
-                          <input type="text" class="text" name="name" id="contact-name" placeholder="Name" />
+                          <input type="text" class="text" name="name" id="contact-name" placeholder="Name" required>
                         </div>
                         <div class="6u">
-                          <input type="text" class="text" name="name" id="contact-email" placeholder="Email" />
+                          <input type="text" class="text" name="name" id="contact-email" placeholder="Email" required>
                         </div>
                       </div>
                       <div class="row half">
                         <div class="12u">
-                          <textarea name="message" id="contact-message" placeholder="Message"></textarea>
+                          <textarea name="message" id="contact-message" placeholder="Message" required></textarea>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="12u">
+                        <div class="6u">
                           <ul class="actions">
                             <li><input type="submit" class="button" value="Send" /></li>
                           </ul>
+                        </div>
+                        <div class="6u">
+                          <div class="thanks">
+                            <h3 class="fa fa-heart">Thanks!</h3>
+                            <p>Thank you for your inquiry. We'll be in touch with you shortly!</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -300,10 +319,30 @@ Template Name: Homepage2014
                     <div class="row">
                       <div class="6u">
                         <section>
+                          <h3 class="fa fa-rss"><span>Blog</span></h3>
+                          <p>
+                            <a href="http://overflowproject.org/blog">overflowproject.org/blog</a>
+                          </p>
+                        </section>
+                      </div>
+                      <div class="6u">
+                        <section>
                           <h3 class="fa fa-envelope"><span>Email</span></h3>
                           <p>
                             <a href="mailto://info@overflowproject.org">info@overflowproject.org</a>
                           </p>
+                        </section>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="6u">
+                        <section>
+                          <h3 class="fa fa-comment"><span>Social</span></h3>
+                          <p>
+                            <a href="http://facebook.com/theoverflowproject">facebook.com/theoverflowproject</a><br>
+                            <a href="http://twitter.com/overflowproject">@overflowproject</a><br>
+                            <a href="http://instagram.com/overflowproject">instagram.com/overflowproject</a>
+                            <p>
                         </section>
                       </div>
                       <div class="6u">
@@ -315,18 +354,6 @@ Template Name: Homepage2014
                             Seattle, WA 98103
                           </p>
                         </section>
-                      </div>
-                      <div class="row">
-                        <div class="12u">
-                          <section>
-                            <h3 class="fa fa-comment"><span>Social</span></h3>
-                            <p>
-                              <a href="http://facebook.com/theoverflowproject">facebook.com/theoverflowproject</a><br>
-                              <a href="http://twitter.com/overflowproject">@overflowproject</a><br>
-                              <a href="http://instagram.com/overflowproject">instagram.com/overflowproject</a>
-                              <p>
-                          </section>
-                        </div>
                       </div>
                     </div>
                   </div>
