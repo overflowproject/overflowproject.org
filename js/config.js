@@ -41,20 +41,21 @@ jQuery(function() {
   }
 
   var submitForm = function(form) {
-    var data = $(form).serializeArray();
-    data['recipient'] = 'lant@lantius.org'
-
+    var data = form.serializeArray();
     $.ajax({  
      type: "POST",  
-     url: "http://formmail.dreamhost.com/cgi-bin/formmail.cgi",  
+     url: form.attr('action'),  
      data: data
-    });  
+    });
+
+    // Clear the form data.
+    form.trigger("reset")
   };
 
   $('#contactform input[type="submit"').click(function(ev) {  
     ev.preventDefault();
     var form = $(this).closest('form');
-    submitForm(form);
+    submitForm($(form));
     var thanks = $(form).find('.thanks');
     $(thanks).hide().fadeIn(500);
 
