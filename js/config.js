@@ -53,6 +53,8 @@ jQuery(function() {
   };
 
   $('#contactform input[type="submit"]').click(function(ev) {  
+    ga('send', 'event', 'form', 'submit', 'contact');
+ 
     ev.preventDefault();
     var form = $(this).closest('form');
     submitForm($(form));
@@ -63,6 +65,8 @@ jQuery(function() {
   });
 
   $('#challengeform input[type="submit"]').click(function(ev) {  
+    ga('send', 'event', 'form', 'submit', 'challenge');
+
     ev.preventDefault();
     var form = $(this).closest('form');
     submitForm(form);
@@ -78,6 +82,24 @@ jQuery(function() {
     }, 650);
 
     return false;  
+  });
+
+  // Scroll depth.
+  $.scrollDepth({
+    elements: ['#challenge-wrapper', '#water-wrapper', '#resources-wrapper', '#about-wrapper', '#copyright'],
+    percentage: false,
+    userTiming: true,
+    pixelDepth: false
+  });
+
+  // Analytics handler for nav.
+  $('#nav a').on('click', function() {
+    ga('send', 'event', 'nav-button', 'click', $(this).href);
+  });
+
+  // Analytics handler for all buttons.
+  $('.button').on('click', function() {
+    ga('send', 'event', 'button', 'click', $(this).id);
   });
 
 });

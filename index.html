@@ -109,7 +109,7 @@
                       <label for="entry.1855968236">My email address is:</label>
                       <input type="text" class="text" name="entry.1855968236" id="challenge-email" placeholder="Email" />
                       <ul class="actions">
-                        <li><input type="submit" class="button" value="Join the challenge" /></li>
+                        <li><input type="submit" class="button" value="Join the challenge" id="challenge-submit"></li>
                       </ul>
                       <input type="hidden" name="draftResponse" value="[,,&quot;2422353388004301033&quot;]">
                       <input type="hidden" name="pageHistory" value="0">
@@ -123,8 +123,8 @@
                       <p>We're excited to join you as you simplify, give, and change.</p>
                       <p>Stay involved with what we're doing and share with us:</p>
                       <ul class="actions">
-                        <li><a href="http://facebook.com/theoverflowproject" class="button small"><span class="fa fa-thumbs-o-up"></span> Like The Overflow Project</a></li>
-                        <li><a href="http://twitter.com/overflowproject" class="button"><span class="fa fa-twitter"></span> Follow @overflowproject</a></li>
+                        <li><a href="http://facebook.com/theoverflowproject" class="button small" id="challenge-facebook-like"><span class="fa fa-thumbs-o-up"></span> Like The Overflow Project</a></li>
+                        <li><a href="http://twitter.com/overflowproject" class="button" id="challenge-twitter-follow"><span class="fa fa-twitter"></span> Follow @overflowproject</a></li>
                       </ul>
                     </div>
                   </div>
@@ -135,8 +135,8 @@
                 <p>We're excited to join you as you simplify, give, and change.</p>
                 <p>Stay involved with what we're doing and share with us:</p>
                 <ul class="actions">
-                  <li><a href="http://facebook.com/theoverflowproject" class="button small"><span class="fa fa-thumbs-o-up"></span> Like The Overflow Project</a></li>
-                  <li><a href="http://twitter.com/overflowproject" class="button"><span class="fa fa-twitter"></span> Follow @overflowproject</a></li>
+                  <li><a href="http://facebook.com/theoverflowproject" class="button small" id="challenge-facebook-like"><span class="fa fa-thumbs-o-up"></span> Like The Overflow Project</a></li>
+                  <li><a href="http://twitter.com/overflowproject" class="button" id="challenge-twitter-follow"><span class="fa fa-twitter"></span> Follow @overflowproject</a></li>
                 </ul>
               </div>
             </div>
@@ -192,7 +192,7 @@
       </div>
     </div>
     <ul class="actions actions-centered">
-      <li><a href="#" class="button button-big">Read our 2013 Report</a></li>
+      <li><a href="#" class="button button-big" id="read-report">Read our 2013 Report</a></li>
     </ul>
   </div>
 </div>
@@ -290,7 +290,7 @@
                   <h3>Support</h3>
                   <p>Please consider supporting The Overflow Project in our mission to simplify, give generously and change lives.</p>
                   <div style="text-align:center">
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="return trackFormSubmit(this, 'donate', 'paypal click', '/support'"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="HVKJTYZQB7JBC"><input type="image" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"></form></div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="ga('send', 'event', 'paypal', 'click', 'support')"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="HVKJTYZQB7JBC"><input type="image" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"></form></div>
                   <p class="small">The Overflow Project is a section 501(c)(3) public charity under the Internal Revenue Code. Donations are tax deductible to the extent permitted by law.</p>
                 </section>
               </div>
@@ -321,7 +321,7 @@
                       <div class="row">
                         <div class="6u">
                           <ul class="actions">
-                            <li><input type="submit" name="submit" class="button" value="Send" id="ss-submit"></li>
+                            <li><input type="submit" name="submit" class="button" value="Send" id="contact-submit"></li>
                           </ul>
                         </div>
                         <div class="6u">
@@ -414,6 +414,7 @@
   <script src="../lib/fitvids/jquery.fitvids.js"></script>
   <script src="/js/rotate-options.js"></script>
   <script src="/js/jquery.dropotron.min.js"></script>
+  <script src="/js/jquery.scrolldepth.min.js"></script>
   <script src="/js/config.js"></script>
   <script src="/js/skel.min.js"></script>
   <script src="/js/skel-panels.min.js"></script>
@@ -422,8 +423,9 @@
       // Target your .container, .wrapper, .post, etc.
       $('.video').fitVids();
       $('#challenge-simplify').rotateOptions(
-        ['Changing my own oil', 'Hosting a yard sale', 'Growing my own food', 'Riding my bike instead of driving',
-         'Drinking PBR instead of IPA', 'Making dinner instead of going out']
+        ['Changing my own oil', 'Hosting a garage sale', 'Growing my own food', 'Riding my bike instead of driving',
+         'Drinking PBR instead of IPA', 'Making dinner instead of going out', 'Cancelling my cable',
+         'Turning down the thermostat', 'Giving up soda', 'Carpooling to work', 'Shorter showers', 'Clothing swap']
       );
     });
   </script>
