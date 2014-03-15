@@ -52,7 +52,7 @@ jQuery(function() {
     form.trigger("reset")
   };
 
-  $('#contactform input[type="submit"').click(function(ev) {  
+  $('#contactform input[type="submit"]').click(function(ev) {  
     ev.preventDefault();
     var form = $(this).closest('form');
     submitForm($(form));
@@ -62,7 +62,7 @@ jQuery(function() {
     return false;  
   });
 
-  $('#challengeform input[type="submit"').click(function(ev) {  
+  $('#challengeform input[type="submit"]').click(function(ev) {  
     ev.preventDefault();
     var form = $(this).closest('form');
     submitForm(form);
