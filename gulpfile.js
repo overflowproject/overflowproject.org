@@ -11,7 +11,7 @@ gulp.task('default', ['less']);
 // Minify and concatenate all CSS files into main-min.css
 gulp.task('less', function() {
   gulp.src(paths.less)
-    .pipe(less())
+    .pipe(less({compress: true}))
     .pipe(gulp.dest('./css/'))
 });
 
