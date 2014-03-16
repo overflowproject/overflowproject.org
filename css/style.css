@@ -332,6 +332,13 @@ article:last-child {
   color: #d7d7d6;
   background: #49464c;
 }
+#resources-wrapper .feature-list a:hover {
+  color: #6dd5e6;
+}
+#resources-wrapper .feature-list a:hover h3:before {
+  color: #49464c;
+  background: #6dd5e6;
+}
 #about-wrapper {
   background: #49464c;
   color: #eee;

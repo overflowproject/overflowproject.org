@@ -5,7 +5,6 @@ TODO
 INDEX PAGE
 ======
 - Images for H2O facts
-- Resources content
 - Map urls from blog to current index site:
 	- /50daychallenge => /#50
 - New video
@@ -15,7 +14,7 @@ INDEX PAGE
 BLOG/CMS
 ======
 - Logo image and header
-
+- 404 page
 
 INFRASTRUCTURE
 ========
