@@ -8,14 +8,6 @@ INDEX PAGE
 - New video
 
 
-BLOG/CMS
-======
-- Logo image and header
-
-INFRASTRUCTURE
-========
-
-
 NOT-LAUNCH-BLOCKING
 =======
 INDEX
