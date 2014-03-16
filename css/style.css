@@ -212,7 +212,7 @@ article:last-child {
   -o-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  background: #e97770 url('images/overlay.png');
+  background: #e97770;
   color: #fff;
 }
 .button:hover {

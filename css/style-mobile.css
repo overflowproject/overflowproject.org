@@ -113,7 +113,7 @@ form .actions {
   background-color: rgba(92, 95, 103, 0.75);
 }
 #navPanel {
-  background: #242730 url('images/overlay.png');
+  background: #242730;
   box-shadow: inset -3px 0px 4px 0px rgba(0, 0, 0, 0.1);
 }
 #navPanel .link {
