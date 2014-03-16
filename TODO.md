@@ -5,8 +5,6 @@ TODO
 INDEX PAGE
 ======
 - Images for H2O facts
-- Map urls from blog to current index site:
-	- /50daychallenge => /#50
 - New video
 
 

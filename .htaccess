@@ -2,6 +2,9 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+RewriteRule 50daychallenge/?$ #50 [R=301,L,NE]
+RewriteRule support/?$ #about [R=301,L,NE]
+
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -31,3 +34,4 @@ RewriteCond %{HTTP_HOST} ^theoverflowproject\.org$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.theoverflowproject\.org$
 RewriteRule ^/?$ "http\:\/\/www\.overflowproject\.org\/" [R=301,L]
 Options -Indexes
+
