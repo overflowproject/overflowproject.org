@@ -8,7 +8,6 @@ INDEX PAGE
 - Map urls from blog to current index site:
 	- /50daychallenge => /#50
 - New video
-- Facebook share tags
 
 
 BLOG/CMS
@@ -34,6 +33,7 @@ BLOG / CMS
 - Give page
 - 1000px template fixes
 - Analytics all the things!
+- FB share tags
 
 INFRASTRUCTURE
 - Document gulp / less
