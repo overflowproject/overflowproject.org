@@ -11,7 +11,6 @@ INDEX PAGE
 BLOG/CMS
 ======
 - Logo image and header
-- 404 page
 
 INFRASTRUCTURE
 ========
