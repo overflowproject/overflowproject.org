@@ -35,3 +35,8 @@ RewriteCond %{HTTP_HOST} ^www\.theoverflowproject\.org$
 RewriteRule ^/?$ "http\:\/\/www\.overflowproject\.org\/" [R=301,L]
 Options -Indexes
 
+#Gzip
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
+#End Gzip
