@@ -22,8 +22,10 @@
  <?php endif; ?>
 
 
-<?php next_posts_link('&laquo; Previous Entries') ?><br/>
-<?php previous_posts_link('&raquo; Next Entries') ?>
+<ul class="actions">
+<li><?php next_posts_link('&laquo; Previous Entries') ?><br/>
+<li><?php previous_posts_link('&raquo; Next Entries') ?>
+</ul>
 
 <br/><br/>
 

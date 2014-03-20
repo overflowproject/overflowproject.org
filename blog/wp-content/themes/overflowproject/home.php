@@ -29,8 +29,10 @@
     <div class="row">
       <div class="-2u 8u">
         <div class="pagination">
-          <?php previous_posts_link('<span class="button big"><span class="fa fa-chevron-circle-left"></span> Newer Posts</span>') ?>
-          <?php next_posts_link('<span class="button big">Older Posts <span class="fa fa-chevron-circle-right"></span> </span>') ?>
+          <ul class="actions">
+          <li><?php previous_posts_link('<span class="button big"><span class="fa fa-chevron-circle-left"></span> Newer</span>') ?>
+          <li><?php next_posts_link('<span class="button big">Older <span class="fa fa-chevron-circle-right"></span> </span>') ?>
+          </ul>
         </div>
       </div>
     </div>

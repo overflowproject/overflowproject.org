@@ -368,22 +368,28 @@ section:last-child, article:last-child {
     background: @blue;
   }
 
-  // Legacy styles.
-  img.alignright {
-    float: right;
-    margin-left: 1em;
-    margin-bottom: 1em;
+  .pagination .actions a {
+    text-decoration: none;
   }
 
-  ul {
-    list-style: inherit;
-    padding-left: 2em;
-  }
 
-  p, ul {
-    margin: 1em 0;
-  }
+  article {
+    // Legacy styles.
+    img.alignright {
+      float: right;
+      margin-left: 1em;
+      margin-bottom: 1em;
+    }
 
+    ul {
+      list-style: inherit;
+      padding-left: 2em;
+    }
+
+    p, ul {
+      margin: 1em 0;
+    }
+  }
 }
 
 #blog-footer-wrapper {

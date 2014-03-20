@@ -1,5 +1,28 @@
 <div id="blog-footer-wrapper" class="wrapper">
   <div class="container">
+    <div class="feature-list feature-list-small">
+      <div class="row">
+        <div class="-3u 3u">
+          <section>
+            <h3 class="fa fa-envelope"><span>Email</span></h3>
+            <p>
+              <a href="mailto://info@overflowproject.org">info@overflowproject.org</a>
+            </p>
+          </section>
+        </div>
+        <div class="3u">
+          <section>
+            <h3 class="fa fa-comment"><span>Social</span></h3>
+            <p>
+              <a href="http://facebook.com/theoverflowproject">facebook.com/theoverflowproject</a><br>
+              <a href="http://twitter.com/overflowproject">@overflowproject</a><br>
+              <a href="http://instagram.com/overflowproject">instagram.com/overflowproject</a>
+              <p>
+          </section>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="12u">
         <div id="copyright">
