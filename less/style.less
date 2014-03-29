@@ -31,6 +31,14 @@ body, input, textarea, select {
   color: @dkgrey;
 }
 
+p {
+ font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
@@ -87,12 +95,15 @@ sup {
 
 form {
   .placeholder(#555, italic);
+  margin-bottom: -2em;
 
   label {
+    font-size: 1.2em;
     display: block;
     color: #484d55;    
   }
   input.text, select, textarea {
+    font-size: 1.2em;
     -webkit-appearance: none;
     display: block;
     border: 0;
@@ -101,6 +112,7 @@ form {
     border-radius: 0.35em;
     width: 100%;
     padding: 0.75em 1em 0.75em 1em;
+    margin-bottom: 1em;
     -moz-transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
@@ -119,10 +131,45 @@ form {
   .thanks {
     display: none;
   }
+
+  .actions {
+    margin-top: 1em;
+    padding-left: 0;
+  }
 }
 
 form ::-moz-focus-inner {
   border: 0;
+}
+
+.actions {
+  padding-left: 3.5em;
+
+  li {
+    display: inline-block;
+    margin: 0 0.75em 0 0.75em;
+  }
+
+  li:first-child {
+    margin-left: 0;
+  }
+  
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+.actions-centered
+{
+  text-align: center;
+}
+
+.button {
+  padding: 0 2.25em 0 2.25em;
+  font-size: 0.9em;
+  min-width: 12em;
+  height: 4em;
+  line-height: 4em;
 }
 
 .nobr {
@@ -224,15 +271,23 @@ section:last-child, article:last-child {
 .wrapper
 {
   position: relative;
+  padding: 6em 0 9em 0;
 
   .title {
+    font-size: 1.2em;
     font-weight: 700;
     background: inherit;
     color: inherit;
     position: absolute;
     top: 0;
     left: 50%;
+    margin-left: -10em;
+    width: 20em;
     text-align: center;
+    height: 3.25em;
+    top: -3.25em;
+    line-height: 3.25em;
+    margin-bottom: -3.25em;
   }
 }
 
@@ -252,6 +307,7 @@ section:last-child, article:last-child {
 
   p {
     text-align: left;
+    margin-top: 0;
     margin-bottom: 1em;
   }
   
@@ -315,16 +371,23 @@ section:last-child, article:last-child {
   background: @ltgrey;
 
   .feature-list {
-    h3:before {
-      color: @ltgrey;
-      background: @dkgrey;
-    }
+    h3 {
+      span:before {
+        color: @ltgrey;
+        background: @dkgrey;
+      }
+      a:hover {
+        color: @blue;
+        span:before {
+          color: @dkgrey;
+          background: @blue;
+        }
+      }
 
-    a:hover {
-      color: @blue;
-      h3:before {
-        color: @dkgrey;
-        background: @blue;
+      span.fa-download:before {
+        height: 1em;
+        width: 1em;
+        line-height: 1em;
       }
     }
 
@@ -374,7 +437,7 @@ section:last-child, article:last-child {
   }
 
   .feature-list {
-    h3:before {
+    h3 span:before {
       color: white;
       background: @blue;
     }
@@ -492,11 +555,28 @@ section:last-child, article:last-child {
 /* Feature List                                                                  */
 /*********************************************************************************/
 .feature-list {
-  h3:before {
-    position: relative;
-    display: inline-block;
-    border-radius: 1em;
-    text-align: center;
+  h3 {
+    a {
+      text-decoration: none;
+    }
+
+    span.fa {
+      padding-right: 1em;
+    }
+
+    span.fa:before {
+      position: relative;
+      display: inline-block;
+      border-radius: 1em;
+      text-align: center;
+      height: 2em;
+      width: 2em;
+      line-height: 2em;
+    }
+  }
+
+  p {
+    padding-left: 3em;
   }
 }
 
