@@ -293,8 +293,6 @@ section:last-child, article:last-child {
 
 #header-wrapper {
   background: @dkgrey;
-  height: 674px;
-  padding: 0;
 
   .button {
     background: darken(@dkgrey, 20%);
@@ -532,6 +530,7 @@ section:last-child, article:last-child {
 /*********************************************************************************/
 #logo {
   color: #fff;
+  text-align: center;
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -551,21 +550,19 @@ section:last-child, article:last-child {
 }
 
 #logo {
-  position: absolute;
-  height: 5em;
-  top: 180px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  margin-top: -0.5em;
-  font-size: 2em;
-
   padding-top: 300px;
-
   background: url('../images/logo-300.png') no-repeat center;
   background-size: 300px;
-
 }
+
+@media screen and (max-width: 767px) {
+  #logo {
+    padding-top: 150px;
+    background: url('../images/logo-150.png') no-repeat center;
+    background-size: 150px;
+  }
+}
+
 
 /*********************************************************************************/
 /* Nav                                                                           */
