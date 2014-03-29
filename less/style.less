@@ -281,8 +281,8 @@ section:last-child, article:last-child {
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -10em;
-    width: 20em;
+    margin-left: -8em;
+    width: 16em;
     text-align: center;
     height: 3.25em;
     top: -3.25em;
@@ -293,6 +293,8 @@ section:last-child, article:last-child {
 
 #header-wrapper {
   background: @dkgrey;
+  height: 674px;
+  padding: 0;
 }
 
 #challenge-wrapper {
@@ -529,6 +531,7 @@ section:last-child, article:last-child {
     font-weight: 900;
     text-transform: uppercase;
     margin: 0.6em 0 0 0;
+    font-size: 1.2em;
   }
 
   .byline {
@@ -541,6 +544,116 @@ section:last-child, article:last-child {
   }
 }
 
+#logo {
+  position: absolute;
+  height: 5em;
+  top: 180px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -0.5em;
+  font-size: 2em;
+
+  padding-top: 300px;
+
+  background: url('../images/logo-300.png') no-repeat center;
+  background-size: 300px;
+
+}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+#nav
+{
+  position: absolute;
+  display: block;
+  top: 2.5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+  #nav > ul > li > ul
+  {
+    display: none;
+  }
+
+  #nav > ul
+  {
+    display: inline-block;
+    border-radius: 0.35em;
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
+    padding: 0 1.5em 0 1.5em;
+  }
+
+  #nav > ul > li
+  {
+    display: inline-block;
+    text-align: center;
+    padding: 0 1.5em 0 1.5em;
+  }
+  
+    #nav > ul > li > a,
+    #nav > ul > li > span
+    {
+      display: block;
+      color: #eee;
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 0.7em;
+      letter-spacing: 0.25em;
+      height: 5em;
+      line-height: 5em;
+      -moz-transition: all .25s ease-in-out;
+      -webkit-transition: all .25s ease-in-out;
+      -o-transition: all .25s ease-in-out;
+      -ms-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+      outline: 0;
+    }
+    
+    #nav > ul > li:hover > a,
+    #nav > ul > li.active > a,
+    #nav > ul > li.active > span
+    {
+      color: #fff;
+    }
+
+#navPanel
+{
+  background: #242730;
+  box-shadow: inset -3px 0px 4px 0px rgba(0,0,0,0.1);
+}
+
+  #navPanel .link
+  {
+    display: block;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.85em;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    height: 44px;
+    line-height: 44px;
+    border-top: solid 1px rgba(255,255,255,0.05);
+    margin: 0 15px 0 15px;
+  }
+
+  #navPanel .link:first-child
+  {
+    border-top: 0;
+  }
+
+  #navPanel .indent-1 { display: inline-block; width: 1em; }
+  #navPanel .indent-2 { display: inline-block; width: 2em; }
+  #navPanel .indent-3 { display: inline-block; width: 3em; }
+  #navPanel .indent-4 { display: inline-block; width: 4em; }
+  #navPanel .indent-5 { display: inline-block; width: 5em; }
+  #navPanel .depth-0 { color: #fff; }
 
 /*********************************************************************************/
 /* Highlights                                                                    */

@@ -42,7 +42,6 @@
 <script src="/js/skel-panels.min.js"></script>
 <script src="/lib/fitvids/jquery.fitvids.js"></script>
 <script src="/js/rotate-options.js"></script>
-<script src="/js/jquery.dropotron.min.js"></script>
 <script src="/js/jquery.scrolldepth.min.js"></script>
 <script>
   $(document).ready(function(){
