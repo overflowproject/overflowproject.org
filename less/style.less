@@ -295,6 +295,11 @@ section:last-child, article:last-child {
   background: @dkgrey;
   height: 674px;
   padding: 0;
+
+  .button {
+    background: darken(@dkgrey, 20%);
+    color: @ltgrey;
+  }
 }
 
 #challenge-wrapper {
@@ -347,9 +352,10 @@ section:last-child, article:last-child {
     .actions {
       li {
         margin: 1em 0 0 0;
-      }
-      li:first-child {
-        margin: 0;
+
+        &:first-child {
+          margin: 0;
+        }
       }
     }
   }
@@ -564,96 +570,150 @@ section:last-child, article:last-child {
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
-
-#nav
-{
+.nav {
   position: absolute;
   display: block;
   top: 2.5em;
   left: 0;
   width: 100%;
   text-align: center;
-}
 
-  #nav > ul > li > ul
-  {
-    display: none;
-  }
-
-  #nav > ul
-  {
+  & > ul {
     display: inline-block;
     border-radius: 0.35em;
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
-    padding: 0 1.5em 0 1.5em;
-  }
+    padding: 0 1em 0 1em;
 
-  #nav > ul > li
-  {
-    display: inline-block;
-    text-align: center;
-    padding: 0 1.5em 0 1.5em;
-  }
+    & > li {
+      display: inline-block;
+      text-align: center;
+      padding: 0 1.5em 0 1.5em;
   
-    #nav > ul > li > a,
-    #nav > ul > li > span
-    {
-      display: block;
-      color: #eee;
-      color: rgba(255,255,255,0.75);
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 0.7em;
-      letter-spacing: 0.25em;
-      height: 5em;
-      line-height: 5em;
-      -moz-transition: all .25s ease-in-out;
-      -webkit-transition: all .25s ease-in-out;
-      -o-transition: all .25s ease-in-out;
-      -ms-transition: all .25s ease-in-out;
-      transition: all .25s ease-in-out;
-      outline: 0;
-    }
+        & > a, & > span {
+        display: block;
+        color: #eee;
+        color: rgba(255,255,255,0.75);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.7em;
+        letter-spacing: 0.25em;
+        height: 5em;
+        line-height: 5em;
+        -moz-transition: all .25s ease-in-out;
+        -webkit-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        outline: 0;
+      }
     
-    #nav > ul > li:hover > a,
-    #nav > ul > li.active > a,
-    #nav > ul > li.active > span
-    {
-      color: #fff;
+      &:hover > a, &.active > a, &.active > span {
+        color: #fff;
+      }
     }
-
-#navPanel
-{
-  background: #242730;
-  box-shadow: inset -3px 0px 4px 0px rgba(0,0,0,0.1);
+  }
 }
 
-  #navPanel .link
-  {
-    display: block;
-    color: rgba(255,255,255,0.5);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 0.85em;
-    letter-spacing: 0.15em;
-    text-decoration: none;
-    height: 44px;
-    line-height: 44px;
-    border-top: solid 1px rgba(255,255,255,0.05);
-    margin: 0 15px 0 15px;
-  }
+// Nav sidebar
+@media screen and (max-width: 767px) {
+  .nav {
+    background-color: darken(@dkgrey, 10%);
+    height: 100%;
+    text-align: left;
+    border: 0;
 
-  #navPanel .link:first-child
-  {
-    border-top: 0;
-  }
+    & > ul { 
+      box-shadow: none;
 
-  #navPanel .indent-1 { display: inline-block; width: 1em; }
-  #navPanel .indent-2 { display: inline-block; width: 2em; }
-  #navPanel .indent-3 { display: inline-block; width: 3em; }
-  #navPanel .indent-4 { display: inline-block; width: 4em; }
-  #navPanel .indent-5 { display: inline-block; width: 5em; }
-  #navPanel .depth-0 { color: #fff; }
+      & > li {
+        border-top: 1px solid @dkgrey;
+        display: list-item;
+        padding: 1em 0;
+        text-align: left;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        & > a, & > span {
+          font-size: 1em;
+          height: inherit;
+          line-height: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+/*********************************************************************************/
+/* Off Canvas                                                                    */
+/*********************************************************************************/
+@media screen and (max-width: 767px) {
+  .offcanvas-container {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+
+    .canvas-toggle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px 0 0 15px;
+      z-index: 9999;
+      opacity: 0.5;
+      -webkit-transition: all .25s ease-out;
+         -moz-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+      .button {
+        min-width: 0em;
+      }
+    }
+
+    &.right {
+      right: 0;
+      &.active {
+        right: 75%;
+        .canvas-toggle {
+          right: 75%;
+        }
+      }
+    }
+
+    &.left {
+      left: 0;
+      &.active {
+        left: 75%;
+        .canvas-toggle {
+          left: 75%;
+        }
+        .offcanvas-element {
+          left: 0;
+        }
+      }
+    }
+
+    .offcanvas-element {
+      -webkit-transition: all .25s ease-out;
+         -moz-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+
+      position: fixed;
+      top: 0;
+      width: 75%;
+
+      &.right {
+        right: -75%;
+      }
+
+      &.left {
+        left: -75%;
+      }
+    }
+  }
+}
+
 
 /*********************************************************************************/
 /* Highlights                                                                    */
@@ -675,16 +735,16 @@ section:last-child, article:last-child {
 
     span.fa {
       padding-right: 1em;
-    }
 
-    span.fa:before {
-      position: relative;
-      display: inline-block;
-      border-radius: 1em;
-      text-align: center;
-      height: 2em;
-      width: 2em;
-      line-height: 2em;
+      &:before {
+        position: relative;
+        display: inline-block;
+        border-radius: 1em;
+        text-align: center;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+      }
     }
   }
 
@@ -707,9 +767,10 @@ section:last-child, article:last-child {
 
     a {
       color: inherit;
-    }
-    a:hover {
-      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }

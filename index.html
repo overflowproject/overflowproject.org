@@ -57,45 +57,33 @@
       ga('send', 'pageview');
     </script> 
   </head>
-<body>
-
-
+<body class="offcanvas-container left">
 
 <!-- Header Wrapper -->
 <div id="header-wrapper" class="wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-      
-        <!-- Header -->
-          <div id="header">
-            
-            <!-- Logo -->
-              <div id="logo" class="blog">
-                <h1>The Overflow Project</h1>
-                <span class="byline">Simplify. Give. Change.</span>
-              </div>
-            <!-- /Logo -->
-            
-            <!-- Nav -->
-              <nav id="nav">
-                <ul>
-                  <li class="desktop-hide"><a href="#">Welcome</a></li>
-                  <li><a href="#50">50-Day Challenge</a></li>
-                  <li><a href="#water">Why Water?</a></li>
-                  <li><a href="#resources">Resources</a></li>
-                  <li><a href="#about">About The Overflow Project</a></li>
-                  <li><a href="/blog">Blog</a></li>
-                </ul>
-              </nav>
-            <!-- /Nav -->
-
-          </div>
-        <!-- /Header -->
-
-      </div>
-    </div>
+  <div class="canvas-toggle visible-xs">
+    <button type="button" class="button" data-toggle="offcanvas"><span class="fa fa-bars"></button>
   </div>
+
+  <!-- Nav -->
+  <nav class="nav offcanvas-element left">
+    <ul>
+      <li class="visible-xs"><a href="#">Welcome</a></li>
+      <li><a href="#50">50-Day Challenge</a></li>
+      <li><a href="#water">Why Water?</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#about">About The Overflow Project</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </nav>
+  <!-- /Nav -->
+
+  <!-- Logo -->
+  <div id="logo">
+    <h1>The Overflow Project</h1>
+    <span class="byline">Simplify. Give. Change.</span>
+  </div>
+  <!-- /Logo -->
 </div>
 <!-- /Header Wrapper -->
 
@@ -443,9 +431,8 @@
 </footer>
 <!-- /Footer Wrapper -->
 
-  <script src="/js/config.js"></script>
   <script src="/js/jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/config.js"></script>
   <script src="/lib/fitvids/jquery.fitvids.js"></script>
   <script src="/js/rotate-options.js"></script>
   <script src="/js/jquery.scrolldepth.min.js"></script>
