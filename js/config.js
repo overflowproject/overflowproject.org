@@ -54,7 +54,6 @@ jQuery(function() {
 
     var flipContainer = $(form).closest('.flip-container');
     $(flipContainer).toggleClass('flipped');
-
     
     var thanks = $(flipContainer).siblings('.thanks');
     setTimeout(function() { 
