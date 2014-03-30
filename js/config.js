@@ -50,14 +50,14 @@ jQuery(function() {
   });
 
   // Set up the flipper for modern browsers by cloning the .thanks response to the back of the flipper.
-  if (!jQuery.browser.msie || jQuery.browser.version > 9) {
-    var flipContainer = $('#challengeform').closest('.flip-container');
-    var thanks = $(flipContainer).siblings('.thanks');
-    var flipper = $(flipContainer).find('.flipper');
-    var fakeThanks = thanks.clone();
-    fakeThanks.removeClass('thanks').addClass('fake-thanks');
-    fakeThanks.wrap("<div class='back'></div>").parent().appendTo(flipper);
-  }
+  // if (!jQuery.browser.msie || jQuery.browser.version > 9) {
+  //   var flipContainer = $('#challengeform').closest('.flip-container');
+  //   var thanks = $(flipContainer).siblings('.thanks');
+  //   var flipper = $(flipContainer).find('.flipper');
+  //   var fakeThanks = thanks.clone();
+  //   fakeThanks.removeClass('thanks').addClass('fake-thanks');
+  //   fakeThanks.wrap("<div class='back'></div>").parent().appendTo(flipper);
+  // }
 
   $('#challengeform input[type="submit"]').click(function(ev) {  
     ga('send', 'event', 'form', 'submit', 'challenge');
@@ -66,20 +66,20 @@ jQuery(function() {
     var form = $(this).closest('form');
     submitForm(form);
 
+    var flipContainer = $(form).closest('.flip-container');
+    var thanks = $(flipContainer).siblings('.thanks');
+
     // For old browsers, just hide the form and show the thanks.
-    if (jQuery.browser.msie && jQuery.browser.version <= 9) {
-        $(flipContainer).hide();
-        $(thanks).show();
-    } else {
-      // For Chrome, do a fancy flip transformation.
-      var flipContainer = $(form).closest('.flip-container');
-      $(flipContainer).toggleClass('flipped');
-      var thanks = $(flipContainer).siblings('.thanks');
-      setTimeout(function() { 
-        $(flipContainer).hide();
-        $(thanks).show();
-      }, 650);
-    }
+    $(flipContainer).hide();
+    $(thanks).show();
+    // } else {
+    //   // For Chrome, do a fancy flip transformation.
+    //   $(flipContainer).toggleClass('flipped');
+    //   setTimeout(function() { 
+    //     $(flipContainer).hide();
+    //     $(thanks).show();
+    //   }, 650);
+    // }
     return false;  
   });
 
