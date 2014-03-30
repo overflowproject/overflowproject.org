@@ -6,10 +6,14 @@
 jQuery(function() {
   $('[data-toggle=offcanvas]').click(function () {
     $('.offcanvas-container').toggleClass('active');
+    $('.offcanvas-element').toggleClass('active');
+    $('.offcanvas-toggle').toggleClass('active');
   });
 
   $(window).scroll(function() {
     $('.offcanvas-container').removeClass('active');
+    $('.offcanvas-element').removeClass('active');
+    $('.offcanvas-toggle').removeClass('active');
   })
 
 

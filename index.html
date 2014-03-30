@@ -57,26 +57,31 @@
       ga('send', 'pageview');
     </script> 
   </head>
-<body class="offcanvas-container left">
+<body>
+  <!-- Nav -->
+  <div class="offcanvas-element left">
+    <nav class="nav">
+      <ul>
+        <li class="visible-xs"><a href="#">Welcome</a></li>
+        <li><a href="#50">50-Day Challenge</a></li>
+        <li><a href="#water">Why Water?</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#about">About The Overflow Project</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- /Nav -->
 
-<!-- Header Wrapper -->
-<div id="header-wrapper" class="wrapper">
-  <div class="canvas-toggle visible-xs">
+  <div class="offcanvas-toggle visible-xs">
     <button type="button" class="button" data-toggle="offcanvas"><span class="fa fa-bars"></button>
   </div>
 
-  <!-- Nav -->
-  <nav class="nav offcanvas-element left">
-    <ul>
-      <li class="visible-xs"><a href="#">Welcome</a></li>
-      <li><a href="#50">50-Day Challenge</a></li>
-      <li><a href="#water">Why Water?</a></li>
-      <li><a href="#resources">Resources</a></li>
-      <li><a href="#about">About The Overflow Project</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>
-  </nav>
-  <!-- /Nav -->
+
+<div class="offcanvas-container left">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper" class="wrapper">
 
   <!-- Logo -->
   <div id="logo">
@@ -430,6 +435,7 @@
   </div>
 </footer>
 <!-- /Footer Wrapper -->
+</div>
 
   <script src="/js/jquery.min.js"></script>
   <script src="/js/config.js"></script>

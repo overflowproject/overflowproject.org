@@ -29,6 +29,7 @@ body, input, textarea, select {
   font-family: 'Source Sans Pro', sans-serif;;
   font-weight: 300;
   color: @dkgrey;
+  background-color: darken(@dkgrey, 10%);
 }
 
 p {
@@ -290,6 +291,15 @@ section:last-child, article:last-child {
     margin-bottom: -3.25em;
   }
 }
+
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 4em 0 7em 0;
+  }
+}
+
+
 
 #header-wrapper {
   background: @dkgrey;
@@ -622,6 +632,7 @@ section:last-child, article:last-child {
     height: 100%;
     text-align: left;
     border: 0;
+    position: relative;
 
     & > ul { 
       box-shadow: none;
@@ -653,66 +664,52 @@ section:last-child, article:last-child {
 @media screen and (max-width: 767px) {
   .offcanvas-container {
     position: relative;
-    -webkit-transition: all .25s ease-out;
-       -moz-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-    transform: translate3d(0,0,0);
-
-    .canvas-toggle {
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 15px 0 0 15px;
-      z-index: 9999;
-      opacity: 0.5;
-      -webkit-transition: all .25s ease-out;
-         -moz-transition: all .25s ease-out;
-              transition: all .25s ease-out;
-      transform: translate3d(0,0,0);
-      .button {
-        min-width: 0em;
-      }
-    }
-
-    &.right {
-      right: 0;
-      &.active {
-        right: 75%;
-        .canvas-toggle {
-          right: 75%;
-        }
-      }
-    }
+    .transition(all .25s ease-out);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 500;
+    .translate3d(0,0,0);
 
     &.left {
       left: 0;
       &.active {
-        left: 75%;
-        .canvas-toggle {
-          left: 75%;
-        }
-        .offcanvas-element {
-          left: 0;
-        }
+        .translate3d(262px, 0, 0);
       }
     }
+  }
 
-    .offcanvas-element {
-      -webkit-transition: all .25s ease-out;
-         -moz-transition: all .25s ease-out;
-              transition: all .25s ease-out;
-      transform: translate3d(0,0,0);
+  .offcanvas-toggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0 0 15px;
+    z-index: 9999;
+    opacity: 0.5;
+    .transition(all .25s ease-out);
+    .translate3d(0,0,0);
+    .button {
+      min-width: 0em;
+    }
+    &.active {
+      .translate3d(262px, 0, 0);
+    }
+  }
 
-      position: fixed;
-      top: 0;
-      width: 75%;
+  .offcanvas-element {
+    .transition(all .25s ease-out);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 500;
 
-      &.right {
-        right: -75%;
-      }
+    position: fixed;
+    display: block;
+    top: 0;
+    height: 100%;
+    
+    width: 262px;
 
-      &.left {
-        left: -75%;
+    &.left {
+      left: -262px;
+      &.active {
+        .translate3d(262px, 0, 0);
       }
     }
   }
