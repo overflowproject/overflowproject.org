@@ -531,6 +531,9 @@ section:last-child, article:last-child {
 #logo {
   color: #fff;
   text-align: center;
+  font-size: 2em;
+  margin-top: 2em;
+
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -543,7 +546,6 @@ section:last-child, article:last-child {
     font-family: 'EB Garamond', serif;
     font-style: italic;
     display: block;
-    margin: 0.6em 0 0 0;
     letter-spacing: 0.02em;
     font-size: 90%;
   }
@@ -551,14 +553,15 @@ section:last-child, article:last-child {
 
 #logo {
   padding-top: 300px;
-  background: url('../images/logo-300.png') no-repeat center;
+  background: url('../images/logo-300.png') no-repeat center top;
   background-size: 300px;
 }
 
 @media screen and (max-width: 767px) {
   #logo {
+    margin-top: 0;
     padding-top: 150px;
-    background: url('../images/logo-150.png') no-repeat center;
+    background: url('../images/logo-150.png') no-repeat center top;
     background-size: 150px;
   }
 }
@@ -652,6 +655,7 @@ section:last-child, article:last-child {
     -webkit-transition: all .25s ease-out;
        -moz-transition: all .25s ease-out;
             transition: all .25s ease-out;
+    transform: translate3d(0,0,0);
 
     .canvas-toggle {
       position: fixed;
@@ -663,6 +667,7 @@ section:last-child, article:last-child {
       -webkit-transition: all .25s ease-out;
          -moz-transition: all .25s ease-out;
               transition: all .25s ease-out;
+      transform: translate3d(0,0,0);
       .button {
         min-width: 0em;
       }
@@ -695,6 +700,7 @@ section:last-child, article:last-child {
       -webkit-transition: all .25s ease-out;
          -moz-transition: all .25s ease-out;
               transition: all .25s ease-out;
+      transform: translate3d(0,0,0);
 
       position: fixed;
       top: 0;
