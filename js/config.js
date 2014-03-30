@@ -71,7 +71,7 @@ jQuery(function() {
 
     // For old browsers, just hide the form and show the thanks.
     $(flipContainer).hide();
-    $(thanks).show();
+    $(thanks).fadeIn();
     // } else {
     //   // For Chrome, do a fancy flip transformation.
     //   $(flipContainer).toggleClass('flipped');
