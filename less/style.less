@@ -114,11 +114,7 @@ form {
     width: 100%;
     padding: 0.75em 1em 0.75em 1em;
     margin-bottom: 1em;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    -ms-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;    
+    .transition(all .25s ease-in-out);
   }
 
   input.text:focus, select:focus, textarea:focus {
@@ -163,14 +159,6 @@ form ::-moz-focus-inner {
 .actions-centered
 {
   text-align: center;
-}
-
-.button {
-  padding: 0 2.25em 0 2.25em;
-  font-size: 0.9em;
-  min-width: 12em;
-  height: 4em;
-  line-height: 4em;
 }
 
 .nobr {
@@ -232,6 +220,10 @@ section:last-child, article:last-child {
 }
 
 .button {
+  padding: 1em 2.25em 1em 2.25em;
+  font-size: 0.9em;
+  min-width: 12em;
+
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
   text-align: center;
@@ -242,29 +234,23 @@ section:last-child, article:last-child {
   border: 0;
   outline: 0;
   cursor: pointer;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s ease-in-out;
-  -o-transition: all .25s ease-in-out;
-  -ms-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
+  .transition(all .25s ease-in-out);
 
   background: #e97770;
   color: #fff;
 }
 
-.button:hover {
-  background-color: #f98780;
-}
-
-.button:active {
-  background-color: #d96760;
+.offcanvas-toggle {
+  .button {
+    background: darken(@dkgrey, 20%);
+    color: @ltgrey;
+  }
 }
 
 .small {
   font-size: 70%;
   line-height: 1.2em;
 }
-
 
 /*********************************************************************************/
 /* Sections */
@@ -303,11 +289,6 @@ section:last-child, article:last-child {
 
 #header-wrapper {
   background: @dkgrey;
-
-  .button {
-    background: darken(@dkgrey, 20%);
-    color: @ltgrey;
-  }
 }
 
 #challenge-wrapper {
@@ -358,6 +339,8 @@ section:last-child, article:last-child {
     color: #919499;
 
     .actions {
+      padding-left: 0;
+
       li {
         margin: 1em 0 0 0;
 
@@ -581,6 +564,7 @@ section:last-child, article:last-child {
 /* Nav                                                                           */
 /*********************************************************************************/
 .nav {
+  z-index: 10000;
   position: absolute;
   display: block;
   top: 2.5em;
