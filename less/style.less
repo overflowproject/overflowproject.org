@@ -7,6 +7,23 @@
 @ltgrey: #d7d7d6;
 
 
+/** FIX FOR CHROME 33 **/
+/** Remove when M34 is stable: https://code.google.com/p/chromium/issues/detail?id=336476 **/
+body
+{
+    -webkit-animation-duration: 0.1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0.1s;
+}
+
+@-webkit-keyframes fontfix{
+  from{   opacity: 1; }
+  to{ opacity: 1; }
+}
+
+
 /*
 Escape Velocity 2.5 by HTML5 UP
 html5up.net | @n33co
