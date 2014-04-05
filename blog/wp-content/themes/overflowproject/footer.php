@@ -37,7 +37,7 @@
 </div>
 
 <script src="/js/jquery.min.js"></script>
-<script src="/js/config.js"></script>
+<script src="/js/config-blog.js"></script>
 <script src="/js/skel.min.js"></script>
 <script src="/js/skel-panels.min.js"></script>
 <script src="/lib/fitvids/jquery.fitvids.js"></script>

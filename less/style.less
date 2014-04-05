@@ -462,9 +462,62 @@ section:last-child, article:last-child {
 
 #blog-header-wrapper {
   background: @dkgrey;
+
+  #nav {
+    z-index: 10000;
+    position: absolute;
+    display: block;
+    top: 2.5em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    & > ul {
+      display: inline-block;
+      list-style-type: none;
+      border-radius: 0.35em;
+      box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
+      padding: 0 1em 0 1em;
+
+      & > li {
+        display: inline-block;
+        text-align: center;
+        padding: 0 1.5em 0 1.5em;
+    
+          & > a, & > span {
+          display: block;
+          color: #eee;
+          color: rgba(255,255,255,0.75);
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 0.7em;
+          letter-spacing: 0.25em;
+          height: 5em;
+          line-height: 5em;
+          -moz-transition: all .25s ease-in-out;
+          -webkit-transition: all .25s ease-in-out;
+          -o-transition: all .25s ease-in-out;
+          -ms-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+          outline: 0;
+        }
+      
+        &:hover > a, &.active > a, &.active > span {
+          color: #fff;
+        }
+      }
+    }    
+  }
+  @media screen and (max-width: 480px) {
+    #nav {
+      display: none;
+    }
+  }
 }
 
 #blog-wrapper {
+  background: white;
+
   .button {
     background: @blue;
   }
