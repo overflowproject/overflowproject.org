@@ -91,14 +91,25 @@ jQuery(function() {
     pixelDepth: false
   });
 
+  // Analytics handler for form interaction.
+  $('form input').on('focus', function() {
+    ga('send', 'event', 'form', 'focus', $(this).attr('id'));
+  });
+
   // Analytics handler for nav.
-  $('#nav a').on('click', function() {
-    ga('send', 'event', 'nav-button', 'click', $(this).href);
+  $('.nav a').on('click', function() {
+    ga('send', 'event', 'nav-button', 'click', $(this).attr('href'));
   });
 
   // Analytics handler for all buttons.
   $('.button').on('click', function() {
-    ga('send', 'event', 'button', 'click', $(this).id);
+    ga('send', 'event', 'button', 'click', $(this).attr('id'));
   });
+
+  // Analytics handler for resources.
+  $('#resources-wrapper a').on('click', function() {
+    ga('send', 'event', 'resource', 'click', $(this).attr('href'));
+  });
+
 
 });
