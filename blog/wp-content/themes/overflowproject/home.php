@@ -3,13 +3,16 @@
   <div class="container">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
+      <a id="<?php the_id()?>"></a>
       <article>
         <div class="row">
           <div class="-1u 1u">
             <div class="results-date">
+              <a href="#<?php the_id()?>" class="secret">
               <?php the_time('j'); ?> <br class="mobile-hide">
               <?php the_time('M'); ?> <br class="mobile-hide">
               <?php the_time('Y'); ?>
+              </a>
             </div>
           </div>
           <div class="8u skel-cell-important">
