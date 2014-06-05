@@ -47,7 +47,7 @@
             
             <!-- Logo -->
               <div id="blog-logo">
-                <h1><img src="/images/logo-50.png"><a href="/blog">The Overflow Project <span class="mobile-hide">Blog</span></a></h1>
+                <h1><img src="/images/logo-50.png"><a href="/blog">The Overflow Project</a></h1>
               </div>
             <!-- /Logo -->
             
