@@ -59,6 +59,7 @@
                   <li><a href="/#water">Why Water?</a></li>
                   <li><a href="/#resources">Resources</a></li>
                   <li><a href="/#about">About The Overflow Project</a></li>
+                  <?php if ( is_page() ) { ?> <li><a href="/blog">Blog</a></li> <?php } ?>
                 </ul>
               </nav>
             <!-- /Nav -->
