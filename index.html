@@ -342,7 +342,11 @@
                 </div>
                 <div class="row half">
                   <div class="col-md-12">
-                    <script language="javascript">function set_captcha(r) { $('#captcha').val(r); }</script>
+                    <script language="javascript">
+                      function set_captcha(r) {
+                        $('#captcha').val(r);
+                        $('#contact-submit').prop('disabled', false);
+                    }</script>
                     <div class="g-recaptcha" data-sitekey="6LcBLv8SAAAAAPBopdYZ4uafmBctfJL7c5zb7Glj" data-callback="set_captcha"></div>
                     <input type="hidden" name="entry.1475314469" id="captcha">
                   </div>
@@ -350,7 +354,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <ul class="actions">
-                      <li><input type="submit" name="submit" class="button" value="Send" id="contact-submit"></li>
+                      <li><input type="submit" name="submit" class="button" value="Send" id="contact-submit" disabled></li>
                     </ul>
                   </div>
                   <div class="col-md-6">
