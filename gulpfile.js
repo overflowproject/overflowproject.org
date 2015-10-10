@@ -5,7 +5,7 @@ var rename = require("gulp-rename");
 
 var paths = {
   less: ['./less/*.less'],
-  html: ['./index.html']
+  html: ['./index-src.html']
 };
 
 // Default task to run when invoking gulp.
@@ -31,7 +31,7 @@ gulp.task('minify', function() {
         removeComments: true,
       }))
     .pipe(rename(function (path) {
-        path.basename += "-min";
+        path.basename = path.basename.replace('-src', '');
       }))
     .pipe(gulp.dest('.'))
 });
