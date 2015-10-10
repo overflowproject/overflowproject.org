@@ -309,8 +309,6 @@ section:last-child, article:last-child {
 }
 
 #challenge-wrapper {
-  @challengeFormFont: ~"'Permanent Marker', cursive";
-
   background: @blue;
   color: #fff;
 
@@ -334,13 +332,12 @@ section:last-child, article:last-child {
   }
 
   form {
-    .placeholder(#777, @family: @challengeFormFont);
+    .placeholder(#777);
     .roundedBorder(rgba(0,0,0,0.25));
     padding: 1em;
     background: #fff;
 
     input[type="text"] {
-      font-family: @challengeFormFont;
       color: black;
     }
     
