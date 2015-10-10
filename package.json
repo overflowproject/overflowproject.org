@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "~3.5.2",
     "gulp-less": "~1.2.1",
-    "gulp-changed": "~0.2.1"
+    "gulp-changed": "~0.2.1",
+    "gulp-htmlmin": "~1.2.0"
   }
 }
