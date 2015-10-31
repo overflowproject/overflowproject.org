@@ -5,7 +5,7 @@ var rename = require("gulp-rename");
 
 var paths = {
   less: ['./less/*.less'],
-  html: ['./index-src.html']
+  html: ['./index-src.html','./404-src.html']
 };
 
 // Default task to run when invoking gulp.
