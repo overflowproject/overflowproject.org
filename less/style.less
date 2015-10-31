@@ -115,11 +115,14 @@ form {
   .placeholder(#555, italic);
   margin-bottom: -2em;
 
-  label {
+  label, .label {
     font-size: 1.2em;
-    display: block;
     color: #484d55;    
   }
+  label {
+    display: block;
+  }
+
   input.text, select, textarea {
     font-size: 1.2em;
     -webkit-appearance: none;
@@ -309,8 +312,6 @@ section:last-child, article:last-child {
 }
 
 #challenge-wrapper {
-  @challengeFormFont: ~"'Permanent Marker', cursive";
-
   background: @blue;
   color: #fff;
 
@@ -334,18 +335,43 @@ section:last-child, article:last-child {
   }
 
   form {
-    .placeholder(#777, @family: @challengeFormFont);
+    .placeholder(#777);
     .roundedBorder(rgba(0,0,0,0.25));
     padding: 1em;
     background: #fff;
 
     input[type="text"] {
-      font-family: @challengeFormFont;
       color: black;
     }
     
+    input[type="number"] {
+      width: 50%;
+    }
+
+    #challenge-duration {
+      display: inline-block;
+    }
+
     label {
       text-align: left;
+    }
+
+    ul#challenge-project {
+      -moz-column-count: 3;
+      -moz-column-gap: 10px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 10px;
+      column-count: 3;
+      column-gap: 10px;
+      padding: 0;
+      margin-top: 0;
+
+      li {
+        list-style-type: none;
+        span {
+          display: inline-block;
+        }
+      }
     }
   }
 
@@ -374,7 +400,7 @@ section:last-child, article:last-child {
 
 }
 
-#water-wrapper {
+#simplify-wrapper {
   background: #fff;
 
   .button {
@@ -421,6 +447,11 @@ section:last-child, article:last-child {
           text-decoration: none;
         }
       }
+    }
+
+    img.thumb {
+      float: left;
+      margin-right: 5px;
     }
   }
 }

@@ -85,7 +85,7 @@ jQuery(function() {
 
   // Scroll depth.
   $.scrollDepth({
-    elements: ['#challenge-wrapper', '#water-wrapper', '#resources-wrapper', '#about-wrapper', '#copyright'],
+    elements: ['#challenge-wrapper', '#simplify-wrapper', '#resources-wrapper', '#about-wrapper', '#copyright'],
     percentage: false,
     userTiming: true,
     pixelDepth: false
