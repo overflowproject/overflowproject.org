@@ -1,28 +1,6 @@
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule 50daychallenge/?$ #50 [R=301,L,NE]
-RewriteRule support/?$ #about [R=301,L,NE]
-RewriteRule ^palatine/(.*)$ blog/$1 [R=301,L]
+ErrorDocument 404 404.html
 
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /blog/index.php [L]
-</IfModule>
 
-<Files production-config.php>
-  Order allow,deny
-  Deny from all
-</Files>
-
-<Files debug.log>
-   Order allow,deny
-   Deny from all
-</Files>
-
-# END WordPress
 RewriteCond %{HTTP_HOST} ^overflowproject\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.overflowproject\.com$
 RewriteRule ^/?$ "http\:\/\/www\.overflowproject\.org\/" [R=301,L]
